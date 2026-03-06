@@ -180,9 +180,7 @@ nav.scrolled{height:62px;box-shadow:0 4px 30px rgba(0,0,0,.35);}
 .ig-stat:last-child{border-right:none;}
 .ig-stat-num{font-size:20px;font-weight:700;color:var(--gold-dark);}
 .ig-stat-lbl{font-size:9.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--text-muted);font-weight:500;margin-top:3px;}
-.ig-right{display:grid;grid-template-columns:1fr 1fr;gap:10px;}
-.ig-photo{aspect-ratio:1;overflow:hidden;border-radius:6px;}
-.ig-photo img{width:100%;height:100%;object-fit:cover;transition:transform .5s;}
+
 .ig-photo:hover img{transform:scale(1.07);}
 
 /* TESTIMONIAL */
@@ -293,7 +291,7 @@ footer{background:#080808;padding:50px 8%;border-top:2px solid var(--gold-dark);
   .listings{padding:80px 5%;}
   .listings-grid{grid-template-columns:1fr;}
   .instagram-section{padding:80px 5%;}
-  .ig-right{grid-template-columns:1fr 1fr;}
+  
   .testimonial{padding:80px 5%;}
   .cta-band{padding:80px 5%;}
   .cta-btns{flex-direction:column;align-items:stretch;}
@@ -317,7 +315,7 @@ footer{background:#080808;padding:50px 8%;border-top:2px solid var(--gold-dark);
   .badge-num{font-size:20px;}
   .hero-stats{flex-direction:column;width:100%;border:none;gap:8px;}
   .stat{border:1px solid var(--border) !important;border-radius:6px;padding:13px 18px;width:100%;}
-  .ig-right{grid-template-columns:1fr;}
+  
   .ig-stats-row{flex-direction:column;}
   .ig-stat{border-right:none !important;border-bottom:1px solid var(--border);}
   .ig-stat:last-child{border-bottom:none;}
@@ -328,6 +326,42 @@ footer{background:#080808;padding:50px 8%;border-top:2px solid var(--gold-dark);
   .sec-title{font-size:26px;}
   .stat-num{font-size:20px;}
 }
+
+/* INSTAGRAM MOCKUP */
+.ig-phone-wrap{display:flex;align-items:center;justify-content:center;position:relative;padding:20px;}
+.ig-phone{width:220px;background:#fff;border-radius:32px;box-shadow:0 30px 80px rgba(0,0,0,.18),0 0 0 8px #f0ece4,0 0 0 10px #e0d8cc;overflow:hidden;position:relative;}
+.ig-phone-notch{width:80px;height:20px;background:#f0ece4;border-radius:0 0 12px 12px;margin:0 auto 0;}
+.ig-phone-screen{background:#fafafa;overflow:hidden;}
+.ig-app-header{display:flex;align-items:center;padding:8px 12px;background:#fff;border-bottom:1px solid #efefef;gap:6px;}
+.ig-app-logo{color:#0d0d0d;}
+.ig-app-name{font-size:13px;font-weight:700;color:#0d0d0d;flex:1;font-family:"Poppins",sans-serif;}
+.ig-app-icons{display:flex;gap:8px;color:#0d0d0d;}
+.ig-profile{display:flex;align-items:center;padding:10px 12px 6px;gap:8px;}
+.ig-avatar-ring{width:48px;height:48px;border-radius:50%;padding:2px;background:linear-gradient(135deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888);flex-shrink:0;}
+.ig-avatar{width:100%;height:100%;border-radius:50%;background:var(--black);display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:700;color:var(--gold);border:2px solid #fff;}
+.ig-profile-stats{display:flex;gap:0;flex:1;justify-content:space-around;}
+.ig-pstat{text-align:center;}
+.ig-pstat-num{font-size:11px;font-weight:700;color:#0d0d0d;line-height:1.2;}
+.ig-pstat-lbl{font-size:9px;color:#737373;font-family:"Poppins",sans-serif;}
+.ig-bio{padding:2px 12px 6px;}
+.ig-bio-name{font-size:10px;font-weight:700;color:#0d0d0d;}
+.ig-bio-title{font-size:9.5px;color:#0d0d0d;}
+.ig-bio-text{font-size:9px;color:#737373;line-height:1.5;margin-top:2px;}
+.ig-follow-btn{margin:6px 12px 8px;background:var(--gold);color:var(--black);text-align:center;padding:6px;border-radius:6px;font-size:10px;font-weight:700;cursor:pointer;}
+.ig-stories{display:flex;gap:8px;padding:4px 12px 8px;overflow-x:auto;scrollbar-width:none;}
+.ig-story{display:flex;flex-direction:column;align-items:center;gap:3px;flex-shrink:0;}
+.ig-story-ring{width:40px;height:40px;border-radius:50%;padding:2px;background:linear-gradient(135deg,#f09433,#e6683c,#dc2743,#cc2366);}
+.ig-story-thumb{width:100%;height:100%;border-radius:50%;border:1.5px solid #fff;display:flex;align-items:center;justify-content:center;}
+.ig-story span{font-size:7.5px;color:#0d0d0d;font-family:"Poppins",sans-serif;max-width:40px;text-align:center;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
+.ig-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5px;background:#efefef;}
+.ig-grid-cell{aspect-ratio:1;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;}
+.ig-grid-badge{position:absolute;bottom:4px;left:4px;background:var(--gold);color:#000;font-size:6px;font-weight:700;padding:2px 4px;border-radius:2px;letter-spacing:.08em;}
+.ig-grid-badge.sold{background:#0d0d0d;color:var(--gold);}
+.ig-bottom-nav{display:flex;align-items:center;justify-content:space-around;padding:8px 12px;background:#fff;border-top:1px solid #efefef;color:#0d0d0d;}
+.ig-add-btn{width:22px;height:22px;border:2px solid #0d0d0d;border-radius:6px;display:flex;align-items:center;justify-content:center;}
+.ig-profile-dot{width:16px;height:16px;border-radius:50%;background:var(--gold);border:2px solid #0d0d0d;}
+.ig-float-like{position:absolute;background:#fff;border-radius:20px;padding:5px 10px;font-size:11px;font-weight:600;box-shadow:0 4px 16px rgba(0,0,0,.12);animation:floatBob 3s ease-in-out infinite;white-space:nowrap;}
+@keyframes floatBob{0%,100%{transform:translateY(0);}50%{transform:translateY(-8px);}}
 </style>
 </head>
 <body>
@@ -341,7 +375,6 @@ footer{background:#080808;padding:50px 8%;border-top:2px solid var(--gold-dark);
     <li><a href="services.html">Services</a></li>
     <li><a href="about.html">About</a></li>
     <li><a href="listings.html">Listings</a></li>
-    <li><a href="#instagram">Connect</a></li>
     <li><a href="contact.html" class="nav-cta">Let's Talk</a></li>
   </ul>
   <button class="hamburger" id="hamburger" aria-label="Open menu">
@@ -354,7 +387,6 @@ footer{background:#080808;padding:50px 8%;border-top:2px solid var(--gold-dark);
   <a href="services.html" class="mobile-link">Services <span class="arrow">›</span></a>
   <a href="about.html" class="mobile-link">About <span class="arrow">›</span></a>
   <a href="listings.html" class="mobile-link">Listings <span class="arrow">›</span></a>
-  <a href="#instagram" class="mobile-link">Connect <span class="arrow">›</span></a>
   <div class="mobile-cta-wrap">
     <a href="contact.html" class="mobile-cta mobile-link">Let's Talk →</a>
   </div>
@@ -423,7 +455,7 @@ footer{background:#080808;padding:50px 8%;border-top:2px solid var(--gold-dark);
   <div class="partner-divider"></div>
   <p class="partner-desc">Dami Olatunde is a proud, certified partner of HAR.com — the Houston Association of Realtors' official MLS platform serving Greater Houston.</p>
   <div class="partner-divider"></div>
-  <a href="https://www.har.com" target="_blank" class="partner-link">Search MLS on HAR.com →</a>
+  <a href="listings.html" class="partner-link">Browse All Listings →</a>
 </div>
 
 <!-- SERVICES -->
@@ -463,8 +495,8 @@ footer{background:#080808;padding:50px 8%;border-top:2px solid var(--gold-dark);
     <div class="svc-card reveal">
       <div class="svc-num">05</div>
       <svg class="svc-icon" viewBox="0 0 44 44" fill="none"><path d="M12 34V20l10-8 10 8v14H26v-8h-8v8z" stroke="#C9A84C" stroke-width="2" stroke-linejoin="round"/><path d="M6 22l16-14 16 14" stroke="#C9A84C" stroke-width="2" stroke-linecap="round"/></svg>
-      <h3 class="svc-name">MLS Search via HAR.com</h3>
-      <p class="svc-text">As an official HAR.com partner, Dami gives you full access to Houston's MLS — every active, pending, and off-market listing at your fingertips.</p>
+      <h3 class="svc-name">Property Listings</h3>
+      <p class="svc-text">Every property Dami lists is published directly on this site — available, sold, and rented — with full details, photos, and enquiry forms.</p>
     </div>
     <div class="svc-card reveal">
       <div class="svc-num">06</div>
@@ -510,7 +542,7 @@ footer{background:#080808;padding:50px 8%;border-top:2px solid var(--gold-dark);
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
       <div class="about-har-text">
         <strong>HAR.com Official Partner</strong>
-        Dami is a certified partner of the Houston Association of Realtors, giving clients direct access to Houston's complete MLS. <a href="https://www.har.com" target="_blank">Search listings on HAR.com →</a>
+        Dami is a certified partner of the Houston Association of Realtors, giving clients direct access to Houston's complete MLS. <a href="listings.html">Browse all listings →</a>
       </div>
     </div>
   </div>
@@ -592,10 +624,70 @@ footer{background:#080808;padding:50px 8%;border-top:2px solid var(--gold-dark);
       </a>
     </div>
     <div class="ig-right reveal">
-      <div class="ig-photo"><img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=400&q=80" alt="Houston property" loading="lazy"/></div>
-      <div class="ig-photo"><img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=400&q=80" alt="Houston luxury home" loading="lazy"/></div>
-      <div class="ig-photo"><img src="https://images.unsplash.com/photo-1583608205776-bfd35f0d9f83?w=400&q=80" alt="Houston neighbourhood" loading="lazy"/></div>
-      <div class="ig-photo"><img src="https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=400&q=80" alt="Houston property" loading="lazy"/></div>
+      <div class="ig-phone-wrap">
+        <div class="ig-phone">
+          <div class="ig-phone-notch"></div>
+          <div class="ig-phone-screen">
+            <div class="ig-app-header">
+              <div class="ig-app-logo"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></div>
+              <span class="ig-app-name">Instagram</span>
+              <div class="ig-app-icons">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg>
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
+              </div>
+            </div>
+            <div class="ig-profile">
+              <div class="ig-avatar-ring"><div class="ig-avatar">DO</div></div>
+              <div class="ig-profile-stats">
+                <div class="ig-pstat"><div class="ig-pstat-num">500+</div><div class="ig-pstat-lbl">posts</div></div>
+                <div class="ig-pstat"><div class="ig-pstat-num">86.5K</div><div class="ig-pstat-lbl">followers</div></div>
+                <div class="ig-pstat"><div class="ig-pstat-num">412</div><div class="ig-pstat-lbl">following</div></div>
+              </div>
+            </div>
+            <div class="ig-bio">
+              <div class="ig-bio-name">Dami Olatunde 🏠</div>
+              <div class="ig-bio-title">Houston's Top 1% Realtor 🔑</div>
+              <div class="ig-bio-text">Buying · Selling · Investing<br>📍 Greater Houston, TX<br>📲 832-955-8008</div>
+            </div>
+            <div class="ig-follow-btn">Follow</div>
+            <div class="ig-stories">
+              <div class="ig-story">
+                <div class="ig-story-ring"><div class="ig-story-thumb" style="background:linear-gradient(135deg,#C9A84C,#7a5e1a)"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/></svg></div></div>
+                <span>For Sale</span>
+              </div>
+              <div class="ig-story">
+                <div class="ig-story-ring"><div class="ig-story-thumb" style="background:#111"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#C9A84C" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></div></div>
+                <span>Market</span>
+              </div>
+              <div class="ig-story">
+                <div class="ig-story-ring"><div class="ig-story-thumb" style="background:linear-gradient(135deg,#1a3a1a,#0d1f0d)"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#6fcf6f" stroke-width="2"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg></div></div>
+                <span>Sold</span>
+              </div>
+              <div class="ig-story">
+                <div class="ig-story-ring"><div class="ig-story-thumb" style="background:linear-gradient(135deg,#6d28d9,#3b0764)"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="16"/><line x1="8" y1="12" x2="16" y2="12"/></svg></div></div>
+                <span>Tips</span>
+              </div>
+            </div>
+            <div class="ig-grid">
+              <div class="ig-grid-cell" style="background:linear-gradient(135deg,#e8dfc0,#c9a84c33)"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="rgba(0,0,0,.15)" stroke-width="1"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/></svg><div class="ig-grid-badge">FOR SALE</div></div>
+              <div class="ig-grid-cell" style="background:linear-gradient(135deg,#111,#2a2a2a)"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="rgba(201,168,76,.2)" stroke-width="1"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/></svg><div class="ig-grid-badge sold">SOLD</div></div>
+              <div class="ig-grid-cell" style="background:linear-gradient(135deg,#d4c48a,#b89650)"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="rgba(0,0,0,.12)" stroke-width="1"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/></svg></div>
+              <div class="ig-grid-cell" style="background:linear-gradient(135deg,#1c1008,#3d2510)"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="rgba(201,168,76,.2)" stroke-width="1"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/></svg><div class="ig-grid-badge">NEW</div></div>
+              <div class="ig-grid-cell" style="background:linear-gradient(135deg,#ede0b8,#c8a855)"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="rgba(0,0,0,.12)" stroke-width="1"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/></svg></div>
+              <div class="ig-grid-cell" style="background:linear-gradient(135deg,#0d1a0d,#1a3316)"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="rgba(111,207,111,.15)" stroke-width="1"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/></svg><div class="ig-grid-badge rented">RENTED</div></div>
+            </div>
+            <div class="ig-bottom-nav">
+              <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/></svg>
+              <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>
+              <div class="ig-add-btn"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div>
+              <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+              <div class="ig-profile-dot"></div>
+            </div>
+          </div>
+        </div>
+        <div class="ig-float" style="top:32%;right:-28px;">❤️ 2,891</div>
+        <div class="ig-float" style="top:55%;left:-30px;animation-delay:1s;">🔥 1,204</div>
+      </div>
     </div>
   </div>
 </section>
@@ -614,7 +706,7 @@ footer{background:#080808;padding:50px 8%;border-top:2px solid var(--gold-dark);
     <p class="cta-text reveal">Whether you're buying your first home, selling a property, relocating to Houston, or looking for a smart investment — Dami Olatunde and his team are ready to guide you every step of the way.</p>
     <div class="cta-btns reveal">
       <a href="contact.html" class="btn-gold">Book a Consultation →</a>
-      <a href="https://www.har.com" target="_blank" class="btn-outline">Search on HAR.com</a>
+      <a href="listings.html" class="btn-outline">View All Properties</a>
     </div>
   </div>
 </section>
@@ -690,7 +782,7 @@ footer{background:#080808;padding:50px 8%;border-top:2px solid var(--gold-dark);
     <div class="footer-links">
       <h4>Partners</h4>
       <ul>
-        <li><a href="https://www.har.com" target="_blank">HAR.com — MLS Search</a></li>
+        <li><a href="listings.html">View All Listings</a></li>
         <li><a href="https://www.har.com" target="_blank">Houston Association of Realtors</a></li>
         <li><a href="https://www.damitherealtor.com" target="_blank">damitherealtor.com</a></li>
       </ul>
