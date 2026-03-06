@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Contact Dami Olatunde | Houston Realtor — Dami The Realtor</title>
+<meta name="description" content="Contact Dami Olatunde — Houston's Top 1% Realtor. Book a consultation, enquire about a property, or send a WhatsApp message today."/>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&display=swap" rel="stylesheet"/>
+<style>
+:root{
+  --gold:#C9A84C;--gold-dark:#A8873A;--gold-light:#E8C96A;--gold-pale:#FDF8EE;
+  --black:#0D0D0D;--black2:#1A1A1A;--black3:#2A2A2A;
+  --white:#FFFFFF;--off-white:#FAFAF7;--gray:#F5F4F0;
+  --text-muted:#777770;--border:#E8E6DF;
+}
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{font-family:'Poppins',sans-serif;background:var(--white);color:var(--black);overflow-x:hidden;}
+
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:1000;padding:0 6%;height:74px;display:flex;align-items:center;justify-content:space-between;background:rgba(255,255,255,0.97);backdrop-filter:blur(20px);border-bottom:2px solid var(--gold);transition:height .3s,box-shadow .3s;}
+nav.scrolled{height:62px;box-shadow:0 4px 30px rgba(0,0,0,.08);}
+.nav-logo{display:flex;align-items:center;gap:12px;text-decoration:none;}
+.nav-logo-mark{width:44px;height:44px;background:var(--black);border-radius:6px;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:15px;color:var(--gold);letter-spacing:-1px;flex-shrink:0;}
+.logo-text-wrap{display:flex;flex-direction:column;line-height:1.2;}
+.brand-name{font-size:13px;font-weight:700;letter-spacing:.07em;color:var(--black);text-transform:uppercase;}
+.brand-tagline{font-size:9px;letter-spacing:.2em;color:var(--gold);text-transform:uppercase;font-weight:500;}
+.nav-links{display:flex;align-items:center;gap:34px;list-style:none;}
+.nav-links a{font-size:11.5px;letter-spacing:.1em;text-transform:uppercase;font-weight:500;color:var(--black);text-decoration:none;position:relative;padding-bottom:4px;transition:color .25s;}
+.nav-links a::after{content:'';position:absolute;bottom:0;left:0;width:0;height:2px;background:var(--gold);transition:width .3s;}
+.nav-links a:hover{color:var(--gold-dark);}
+.nav-links a:hover::after,.nav-links a.active::after{width:100%;}
+.nav-links a.active{color:var(--gold-dark);}
+.nav-cta{display:inline-flex !important;align-items:center !important;gap:7px !important;background:var(--gold) !important;color:var(--black) !important;padding:12px 22px !important;border-radius:6px !important;font-weight:700 !important;font-size:11.5px !important;letter-spacing:.08em !important;line-height:1 !important;transition:background .2s,transform .15s !important;}
+.nav-cta::after{display:none !important;}
+.nav-cta:hover{background:var(--gold-dark) !important;transform:translateY(-1px);}
+.nav-links li:last-child{padding-left:20px;margin-left:8px;border-left:1.5px solid var(--border);}
+.hamburger{display:none;background:none;border:none;cursor:pointer;padding:6px;flex-direction:column;gap:5px;align-items:flex-end;}
+.hamburger span{display:block;height:2px;background:var(--black);border-radius:2px;transition:all .3s;}
+.hamburger span:nth-child(1){width:24px;}
+.hamburger span:nth-child(2){width:18px;}
+.hamburger span:nth-child(3){width:24px;}
+.hamburger.active span:nth-child(1){transform:translateY(7px) rotate(45deg);width:24px;}
+.hamburger.active span:nth-child(2){opacity:0;width:0;}
+.hamburger.active span:nth-child(3){transform:translateY(-7px) rotate(-45deg);width:24px;}
+.mobile-menu{position:fixed;top:74px;left:0;right:0;bottom:0;background:var(--white);z-index:999;display:flex;flex-direction:column;padding:32px 6%;transform:translateX(100%);transition:transform .35s cubic-bezier(.4,0,.2,1);border-top:1px solid var(--border);overflow-y:auto;}
+.mobile-menu.open{transform:translateX(0);}
+.mobile-menu a{font-size:16px;font-weight:600;color:var(--black);text-decoration:none;letter-spacing:.05em;text-transform:uppercase;padding:20px 0;border-bottom:1px solid var(--border);display:flex;align-items:center;justify-content:space-between;transition:color .2s;}
+.mobile-menu a:hover{color:var(--gold);}
+.mobile-menu a .arrow{font-size:20px;color:var(--gold);}
+.mobile-cta-wrap{margin-top:36px;padding-bottom:40px;}
+.mobile-cta{display:flex !important;align-items:center;justify-content:center;gap:8px;width:100%;background:var(--gold);color:var(--black) !important;text-align:center;padding:20px;border-radius:8px;font-size:15px !important;font-weight:700 !important;letter-spacing:.1em !important;border-bottom:none !important;text-decoration:none;transition:background .2s;}
+.mobile-cta:hover{background:var(--gold-dark) !important;}
+
+/* PAGE HERO */
+.contact-hero{padding-top:74px;background:var(--black);overflow:hidden;position:relative;}
+.contact-hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 30% 60%, rgba(201,168,76,.07) 0%, transparent 65%);}
+.contact-hero-inner{padding:80px 8% 0;position:relative;z-index:1;display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:end;}
+.ch-left{}
+.breadcrumb{display:flex;align-items:center;gap:8px;margin-bottom:22px;}
+.breadcrumb a{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.35);text-decoration:none;transition:color .2s;}
+.breadcrumb a:hover{color:var(--gold);}
+.breadcrumb span{color:rgba(255,255,255,.15);font-size:11px;}
+.breadcrumb .current{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);font-weight:600;}
+.ch-eyebrow{display:flex;align-items:center;gap:10px;margin-bottom:18px;}
+.ch-bar{width:30px;height:3px;background:var(--gold);border-radius:2px;}
+.ch-tag{font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);font-weight:600;}
+.ch-title{font-size:clamp(36px,4vw,58px);font-weight:700;color:var(--white);line-height:1.08;margin-bottom:18px;}
+.ch-title span{color:var(--gold);}
+.ch-sub{font-size:14px;line-height:1.9;color:rgba(255,255,255,.45);margin-bottom:40px;max-width:440px;}
+.ch-right{padding-bottom:0;display:flex;flex-direction:column;justify-content:flex-end;}
+.quick-reach{display:flex;flex-direction:column;gap:12px;padding-bottom:60px;}
+.qr-title{font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.3);font-weight:500;margin-bottom:6px;}
+.qr-item{display:flex;align-items:center;gap:14px;padding:16px 20px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08);border-radius:6px;text-decoration:none;transition:border-color .25s,background .25s;}
+.qr-item:hover{border-color:var(--gold);background:rgba(201,168,76,.06);}
+.qr-icon{width:38px;height:38px;background:rgba(201,168,76,.1);border:1px solid rgba(201,168,76,.2);border-radius:4px;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+.qr-icon svg{width:16px;height:16px;color:var(--gold);}
+.qr-lbl{font-size:9.5px;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.3);font-weight:500;}
+.qr-val{font-size:13px;color:var(--white);font-weight:500;}
+
+/* GOLD DIVIDER */
+.gold-divider{height:3px;background:linear-gradient(90deg,var(--gold),transparent);width:100%;}
+
+/* MAIN CONTACT SECTION */
+.contact-main{padding:90px 8%;background:var(--off-white);display:grid;grid-template-columns:1fr 1.1fr;gap:70px;align-items:start;}
+
+/* LEFT - INFO */
+.contact-info-col{}
+.sec-eyebrow{display:flex;align-items:center;gap:10px;margin-bottom:14px;}
+.sec-bar{width:30px;height:3px;background:var(--gold);border-radius:2px;}
+.sec-tag{font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold-dark);font-weight:600;}
+.sec-title{font-size:clamp(26px,2.8vw,40px);font-weight:700;line-height:1.15;color:var(--black);margin-bottom:16px;}
+.sec-title span{color:var(--gold);}
+.contact-desc{font-size:14px;line-height:1.9;color:var(--text-muted);margin-bottom:36px;}
+.info-cards{display:flex;flex-direction:column;gap:14px;margin-bottom:36px;}
+.info-card{display:flex;align-items:flex-start;gap:14px;padding:18px 20px;background:var(--white);border:1px solid var(--border);border-radius:6px;transition:border-color .25s;}
+.info-card:hover{border-color:var(--gold);}
+.ic-icon{width:42px;height:42px;flex-shrink:0;background:var(--gold-pale);border:1px solid rgba(201,168,76,.2);display:flex;align-items:center;justify-content:center;border-radius:4px;}
+.ic-icon svg{width:18px;height:18px;color:var(--gold-dark);}
+.ic-lbl{font-size:9.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--text-muted);margin-bottom:3px;font-weight:500;}
+.ic-val{font-size:13px;color:var(--black);font-weight:500;line-height:1.5;}
+.ic-val a{color:var(--gold-dark);text-decoration:none;}
+.ic-val a:hover{color:var(--gold);}
+
+/* OFFICE HOURS */
+.hours-card{background:var(--black);border-radius:8px;padding:26px 24px;border:1px solid rgba(201,168,76,.15);}
+.hours-title{font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);font-weight:600;margin-bottom:18px;display:flex;align-items:center;gap:8px;}
+.hours-title svg{width:14px;height:14px;}
+.hours-row{display:flex;justify-content:space-between;align-items:center;padding:10px 0;border-bottom:1px solid rgba(255,255,255,.06);}
+.hours-row:last-child{border-bottom:none;}
+.hours-day{font-size:12px;color:rgba(255,255,255,.5);}
+.hours-time{font-size:12px;color:var(--white);font-weight:500;}
+.hours-avail{font-size:11px;color:#4caf50;font-weight:600;display:flex;align-items:center;gap:5px;}
+.hours-avail::before{content:'';width:6px;height:6px;border-radius:50%;background:#4caf50;flex-shrink:0;}
+
+/* RIGHT - FORM */
+.contact-form-col{}
+.form-card{background:var(--white);border:1px solid var(--border);border-radius:10px;padding:44px 40px;box-shadow:0 8px 40px rgba(0,0,0,.05);}
+.form-title{font-size:20px;font-weight:700;color:var(--black);margin-bottom:6px;}
+.form-sub{font-size:13px;color:var(--text-muted);margin-bottom:30px;}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
+.f-group{display:flex;flex-direction:column;gap:7px;margin-bottom:16px;}
+.f-label{font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--black);font-weight:600;}
+.f-input,.f-textarea,.f-select{background:var(--off-white);border:1.5px solid var(--border);color:var(--black);padding:13px 15px;font-size:13px;font-family:'Poppins',sans-serif;font-weight:400;outline:none;border-radius:4px;transition:border-color .25s,background .25s;width:100%;}
+.f-input:focus,.f-textarea:focus,.f-select:focus{border-color:var(--gold);background:var(--white);}
+.f-textarea{resize:vertical;min-height:120px;}
+.f-select{color:var(--text-muted);cursor:pointer;}
+.f-select:focus{color:var(--black);}
+
+/* SERVICE CHIPS */
+.service-chips{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:20px;}
+.chip{padding:8px 16px;border:1.5px solid var(--border);border-radius:30px;font-size:11px;font-weight:600;letter-spacing:.06em;color:var(--text-muted);cursor:pointer;transition:all .2s;background:var(--white);font-family:'Poppins',sans-serif;}
+.chip:hover{border-color:var(--gold);color:var(--gold-dark);}
+.chip.selected{border-color:var(--gold);background:var(--gold);color:var(--black);}
+.chip-label{font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--black);font-weight:600;margin-bottom:12px;}
+
+.btn-submit{width:100%;background:var(--gold);color:var(--black);padding:15px 36px;font-size:12px;letter-spacing:.16em;text-transform:uppercase;font-weight:700;border:none;cursor:pointer;border-radius:4px;font-family:'Poppins',sans-serif;transition:background .25s,transform .2s;margin-top:6px;}
+.btn-submit:hover{background:var(--gold-dark);transform:translateY(-2px);}
+.form-disclaimer{font-size:11px;color:var(--text-muted);margin-top:14px;line-height:1.6;text-align:center;}
+
+/* SUCCESS STATE */
+.success-state{display:none;flex-direction:column;align-items:center;justify-content:center;gap:16px;padding:60px 20px;text-align:center;}
+.success-state.show{display:flex;}
+.success-icon{width:64px;height:64px;background:var(--gold-pale);border-radius:50%;display:flex;align-items:center;justify-content:center;border:2px solid var(--gold);}
+.success-icon svg{width:28px;height:28px;color:var(--gold);}
+.success-title{font-size:20px;font-weight:700;color:var(--black);}
+.success-sub{font-size:13px;color:var(--text-muted);max-width:300px;line-height:1.7;}
+
+/* FAQs */
+.faqs{padding:100px 8%;background:var(--black);}
+.faq-header{text-align:center;margin-bottom:60px;}
+.faq-header .sec-title{color:var(--white);}
+.faq-header .sec-bar{background:var(--gold);}
+.faq-header .sec-tag{color:var(--gold);}
+.faq-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;max-width:960px;margin:0 auto;}
+.faq-item{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:6px;overflow:hidden;}
+.faq-q{display:flex;align-items:center;justify-content:space-between;padding:20px 22px;cursor:pointer;transition:background .2s;}
+.faq-q:hover{background:rgba(255,255,255,.03);}
+.faq-q-text{font-size:13px;font-weight:600;color:var(--white);line-height:1.4;}
+.faq-toggle{width:24px;height:24px;flex-shrink:0;background:rgba(201,168,76,.1);border-radius:50%;display:flex;align-items:center;justify-content:center;transition:background .2s,transform .3s;}
+.faq-toggle svg{width:12px;height:12px;color:var(--gold);}
+.faq-item.open .faq-toggle{background:var(--gold);transform:rotate(45deg);}
+.faq-item.open .faq-toggle svg{color:var(--black);}
+.faq-a{font-size:13px;color:rgba(255,255,255,.5);line-height:1.8;padding:0 22px;max-height:0;overflow:hidden;transition:max-height .35s ease,padding .35s ease;}
+.faq-item.open .faq-a{max-height:200px;padding:0 22px 20px;}
+
+/* SOCIAL CONNECT */
+.social-connect{padding:80px 8%;background:var(--gold-pale);border-top:1px solid var(--border);}
+.sc-inner{display:flex;align-items:center;justify-content:space-between;gap:40px;flex-wrap:wrap;}
+.sc-left{}
+.sc-title{font-size:clamp(22px,2.5vw,36px);font-weight:700;color:var(--black);margin-bottom:8px;}
+.sc-sub{font-size:14px;color:var(--text-muted);}
+.sc-btns{display:flex;gap:14px;flex-wrap:wrap;}
+.sc-btn{display:flex;align-items:center;gap:10px;padding:13px 22px;border-radius:6px;font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;text-decoration:none;transition:all .2s;}
+.sc-btn-ig{background:var(--black);color:var(--white);}
+.sc-btn-ig:hover{background:var(--black2);}
+.sc-btn-wa{background:#25d366;color:var(--white);}
+.sc-btn-wa:hover{background:#1fb855;}
+.sc-btn svg{width:16px;height:16px;}
+
+/* REVEAL */
+.reveal{opacity:0;transform:translateY(26px);transition:opacity .6s ease,transform .6s ease;}
+.reveal.visible{opacity:1;transform:translateY(0);}
+
+/* FOOTER */
+footer{background:#080808;padding:50px 8%;border-top:2px solid var(--gold-dark);}
+.footer-top{display:flex;align-items:flex-start;justify-content:space-between;flex-wrap:wrap;gap:40px;margin-bottom:40px;}
+.footer-brand-logo{display:flex;align-items:center;gap:10px;margin-bottom:12px;}
+.footer-brand-mark{width:38px;height:38px;background:var(--gold);border-radius:4px;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:13px;color:var(--black);}
+.footer-brand-name{font-size:14px;font-weight:700;color:var(--white);letter-spacing:.06em;text-transform:uppercase;}
+.footer-brand-sub{font-size:12px;color:rgba(255,255,255,.3);max-width:240px;line-height:1.65;}
+.footer-links h4{font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);font-weight:600;margin-bottom:16px;}
+.footer-links ul{list-style:none;display:flex;flex-direction:column;gap:10px;}
+.footer-links ul a{font-size:13px;color:rgba(255,255,255,.45);text-decoration:none;transition:color .2s;}
+.footer-links ul a:hover{color:var(--gold);}
+.footer-socials-block h4{font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);font-weight:600;margin-bottom:16px;}
+.footer-socials{display:flex;gap:10px;}
+.social-btn{width:38px;height:38px;border:1px solid rgba(255,255,255,.1);display:flex;align-items:center;justify-content:center;border-radius:4px;color:rgba(255,255,255,.5);transition:all .2s;text-decoration:none;}
+.social-btn svg{width:16px;height:16px;}
+.social-btn:hover{border-color:var(--gold);color:var(--gold);}
+.footer-bottom{display:flex;align-items:center;justify-content:space-between;padding-top:28px;border-top:1px solid rgba(255,255,255,.06);flex-wrap:wrap;gap:10px;}
+.footer-copy{font-size:12px;color:rgba(255,255,255,.25);}
+.footer-copy span{color:rgba(255,255,255,.5);}
+.footer-har{font-size:12px;color:rgba(255,255,255,.25);}
+.footer-har a{color:var(--gold);text-decoration:none;}
+
+/* RESPONSIVE */
+@media(max-width:1024px){
+  .contact-hero-inner{grid-template-columns:1fr;}
+  .contact-main{grid-template-columns:1fr;}
+  .faq-grid{grid-template-columns:1fr;}
+}
+@media(max-width:768px){
+  .hamburger{display:flex;}
+  .nav-links{display:none;}
+  .contact-hero-inner{padding:60px 5% 0;gap:40px;}
+  .contact-main{padding:60px 5%;gap:40px;}
+  .faqs{padding:70px 5%;}
+  .social-connect{padding:60px 5%;}
+  .form-card{padding:28px 22px;}
+  footer{padding:40px 5%;}
+  .footer-top{flex-direction:column;gap:30px;}
+  .footer-bottom{flex-direction:column;align-items:flex-start;gap:8px;}
+}
+@media(max-width:480px){
+  nav{padding:0 5%;}
+  .form-row{grid-template-columns:1fr;}
+  .sc-btns{flex-direction:column;align-items:stretch;}
+  .sc-btn{justify-content:center;}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="navbar">
+  <a href="index.html" class="nav-logo">
+    <div class="nav-logo-mark">DTR</div>
+    <div class="logo-text-wrap">
+      <span class="brand-name">Dami The Realtor</span>
+      <span class="brand-tagline">Houston's Top 1% Agent</span>
+    </div>
+  </a>
+  <ul class="nav-links">
+    <li><a href="index.html#services">Services</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="listings.html">Listings</a></li>
+    <li><a href="index.html#instagram">Connect</a></li>
+    <li><a href="contact.html" class="nav-cta active">Let's Talk</a></li>
+  </ul>
+  <button class="hamburger" id="hamburger" aria-label="Open menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobileMenu">
+  <a href="index.html#services" class="mobile-link">Services <span class="arrow">›</span></a>
+  <a href="about.html" class="mobile-link">About <span class="arrow">›</span></a>
+  <a href="listings.html" class="mobile-link">Listings <span class="arrow">›</span></a>
+  <a href="index.html#instagram" class="mobile-link">Connect <span class="arrow">›</span></a>
+  <div class="mobile-cta-wrap">
+    <a href="contact.html" class="mobile-cta mobile-link">Let's Talk →</a>
+  </div>
+</div>
+
+<!-- HERO -->
+<section class="contact-hero">
+  <div class="contact-hero-inner">
+    <div class="ch-left">
+      <div class="breadcrumb">
+        <a href="index.html">Home</a>
+        <span>›</span>
+        <span class="current">Contact</span>
+      </div>
+      <div class="ch-eyebrow"><div class="ch-bar"></div><span class="ch-tag">Let's Connect</span></div>
+      <h1 class="ch-title">Let's Talk <span>Real Estate.</span></h1>
+      <p class="ch-sub">Ready to buy, sell, or invest in Houston? Dami Olatunde is ready to listen. Reach out today and take the first step towards your real estate goals.</p>
+    </div>
+    <div class="ch-right">
+      <div class="quick-reach">
+        <div class="qr-title">Reach Dami Directly</div>
+        <a href="tel:+18321234567" class="qr-item">
+          <div class="qr-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013 9.09a19.78 19.78 0 01-3.07-8.67A2 2 0 011.87 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 9.91"/></svg></div>
+          <div><div class="qr-lbl">Call / Text</div><div class="qr-val">+1 (832) 123-4567</div></div>
+        </a>
+        <a href="mailto:dami@damitherealtor.com" class="qr-item">
+          <div class="qr-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div>
+          <div><div class="qr-lbl">Email</div><div class="qr-val">dami@damitherealtor.com</div></div>
+        </a>
+        <a href="https://wa.me/18321234567" target="_blank" class="qr-item">
+          <div class="qr-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg></div>
+          <div><div class="qr-lbl">WhatsApp</div><div class="qr-val">Message on WhatsApp →</div></div>
+        </a>
+      </div>
+    </div>
+  </div>
+  <div class="gold-divider" style="margin-top:60px;"></div>
+</section>
+
+<!-- CONTACT MAIN -->
+<section class="contact-main">
+
+  <!-- LEFT INFO -->
+  <div class="contact-info-col reveal">
+    <div class="sec-eyebrow"><div class="sec-bar"></div><span class="sec-tag">Contact Info</span></div>
+    <h2 class="sec-title">Get in <span>Touch</span></h2>
+    <p class="contact-desc">Whether you have a quick question or are ready to make your move — Dami is personally available and typically responds within the hour.</p>
+
+    <div class="info-cards">
+      <div class="info-card">
+        <div class="ic-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013 9.09a19.78 19.78 0 01-3.07-8.67A2 2 0 011.87 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 9.91"/></svg></div>
+        <div>
+          <div class="ic-lbl">Phone / Text</div>
+          <div class="ic-val"><a href="tel:+18321234567">+1 (832) 123-4567</a></div>
+        </div>
+      </div>
+      <div class="info-card">
+        <div class="ic-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div>
+        <div>
+          <div class="ic-lbl">Email</div>
+          <div class="ic-val"><a href="mailto:dami@damitherealtor.com">dami@damitherealtor.com</a></div>
+        </div>
+      </div>
+      <div class="info-card">
+        <div class="ic-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+        <div>
+          <div class="ic-lbl">Service Area</div>
+          <div class="ic-val">Greater Houston, TX · Harris, Fort Bend & Montgomery Counties</div>
+        </div>
+      </div>
+      <div class="info-card">
+        <div class="ic-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg></div>
+        <div>
+          <div class="ic-lbl">MLS Partner</div>
+          <div class="ic-val"><a href="https://www.har.com" target="_blank">HAR.com — Houston Association of Realtors</a></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- HOURS -->
+    <div class="hours-card">
+      <div class="hours-title">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        Availability
+      </div>
+      <div class="hours-row">
+        <span class="hours-day">Monday – Friday</span>
+        <span class="hours-time">8:00 AM – 7:00 PM</span>
+      </div>
+      <div class="hours-row">
+        <span class="hours-day">Saturday</span>
+        <span class="hours-time">9:00 AM – 5:00 PM</span>
+      </div>
+      <div class="hours-row">
+        <span class="hours-day">Sunday</span>
+        <span class="hours-time">By Appointment</span>
+      </div>
+      <div class="hours-row" style="border-bottom:none;">
+        <span class="hours-day">Response Time</span>
+        <span class="hours-avail">Within 1 Hour</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- RIGHT FORM -->
+  <div class="contact-form-col reveal">
+    <div class="form-card">
+      <div id="formContent">
+        <div class="form-title">Send Dami a Message</div>
+        <div class="form-sub">Fill out the form and Dami will get back to you within the hour.</div>
+
+        <div class="chip-label">What can Dami help you with?</div>
+        <div class="service-chips">
+          <button class="chip" onclick="toggleChip(this)">Buying a Home</button>
+          <button class="chip" onclick="toggleChip(this)">Selling a Property</button>
+          <button class="chip" onclick="toggleChip(this)">Real Estate Investment</button>
+          <button class="chip" onclick="toggleChip(this)">Relocation to Houston</button>
+          <button class="chip" onclick="toggleChip(this)">Luxury Properties</button>
+          <button class="chip" onclick="toggleChip(this)">General Consultation</button>
+        </div>
+
+        <div class="form-row">
+          <div class="f-group"><label class="f-label">First Name</label><input class="f-input" type="text" placeholder="John"/></div>
+          <div class="f-group"><label class="f-label">Last Name</label><input class="f-input" type="text" placeholder="Doe"/></div>
+        </div>
+        <div class="f-group"><label class="f-label">Email Address</label><input class="f-input" type="email" placeholder="john@example.com"/></div>
+        <div class="f-group"><label class="f-label">Phone / WhatsApp</label><input class="f-input" type="tel" placeholder="+1 (832) xxx-xxxx"/></div>
+        <div class="f-group">
+          <label class="f-label">Budget / Price Range</label>
+          <select class="f-select">
+            <option value="">Select your budget range</option>
+            <option>Under $300,000</option>
+            <option>$300,000 – $600,000</option>
+            <option>$600,000 – $1,000,000</option>
+            <option>$1,000,000 – $2,000,000</option>
+            <option>$2,000,000+</option>
+          </select>
+        </div>
+        <div class="f-group"><label class="f-label">Your Message</label><textarea class="f-textarea" placeholder="Tell Dami about your real estate needs — the more detail, the better she can help you…"></textarea></div>
+        <button class="btn-submit" id="submitBtn">Send Message →</button>
+        <div class="form-disclaimer">By submitting, you agree to be contacted by Dami Olatunde. Your information is kept strictly confidential and never shared.</div>
+      </div>
+      <div class="success-state" id="successState">
+        <div class="success-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+        </div>
+        <div class="success-title">Message Sent!</div>
+        <div class="success-sub">Thank you! Dami will personally get back to you within the hour. 🏠</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQs -->
+<section class="faqs">
+  <div class="faq-header reveal">
+    <div class="sec-eyebrow" style="justify-content:center;"><div class="sec-bar" style="background:var(--gold)"></div><span class="sec-tag" style="color:var(--gold)">Got Questions?</span></div>
+    <h2 class="sec-title" style="color:var(--white);">Frequently Asked <span>Questions</span></h2>
+  </div>
+  <div class="faq-grid">
+    <div class="faq-item reveal">
+      <div class="faq-q" onclick="toggleFaq(this)">
+        <span class="faq-q-text">How do I start buying a home with Dami?</span>
+        <div class="faq-toggle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div>
+      </div>
+      <div class="faq-a">Simply send us a message using the form above or call/WhatsApp Dami directly. She'll schedule a free consultation call to understand your needs, budget, and timeline — then get to work.</div>
+    </div>
+    <div class="faq-item reveal">
+      <div class="faq-q" onclick="toggleFaq(this)">
+        <span class="faq-q-text">Does Dami work with out-of-state or international buyers?</span>
+        <div class="faq-toggle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div>
+      </div>
+      <div class="faq-a">Absolutely. Dami is a relocation specialist and works with clients from across the US and internationally. Virtual tours, remote signings, and full concierge support are all available.</div>
+    </div>
+    <div class="faq-item reveal">
+      <div class="faq-q" onclick="toggleFaq(this)">
+        <span class="faq-q-text">What areas does Dami cover in Greater Houston?</span>
+        <div class="faq-toggle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div>
+      </div>
+      <div class="faq-a">Dami covers all of Greater Houston including River Oaks, Galleria, Memorial, The Heights, Katy, Sugar Land, The Woodlands, Pearland, Friendswood, and 20+ other neighbourhoods.</div>
+    </div>
+    <div class="faq-item reveal">
+      <div class="faq-q" onclick="toggleFaq(this)">
+        <span class="faq-q-text">What's your commission structure?</span>
+        <div class="faq-toggle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div>
+      </div>
+      <div class="faq-a">Commission is discussed transparently during your initial consultation. As a buyer, Dami's services are typically free to you — her commission is paid by the seller. Contact us for seller-side details.</div>
+    </div>
+    <div class="faq-item reveal">
+      <div class="faq-q" onclick="toggleFaq(this)">
+        <span class="faq-q-text">How quickly can Dami list my property?</span>
+        <div class="faq-toggle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div>
+      </div>
+      <div class="faq-a">Once you're ready, Dami can have your listing live on HAR.com and across social media within 48–72 hours — complete with professional photography and a full marketing campaign.</div>
+    </div>
+    <div class="faq-item reveal">
+      <div class="faq-q" onclick="toggleFaq(this)">
+        <span class="faq-q-text">Does Dami assist with investment properties?</span>
+        <div class="faq-toggle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div>
+      </div>
+      <div class="faq-a">Yes — investment real estate is one of Dami's specialties. From single-family rentals to multi-units and fix-and-flip opportunities, she can help you identify, analyse, and acquire high-yield properties.</div>
+    </div>
+  </div>
+</section>
+
+<!-- SOCIAL CONNECT -->
+<section class="social-connect">
+  <div class="sc-inner reveal">
+    <div class="sc-left">
+      <h2 class="sc-title">Follow Dami's Real Estate Journey</h2>
+      <p class="sc-sub">86,500+ Houstonians follow Dami for market insights, property tours, and real estate education.</p>
+    </div>
+    <div class="sc-btns">
+      <a href="https://instagram.com/damitherealtor" target="_blank" class="sc-btn sc-btn-ig">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+        Follow on Instagram
+      </a>
+      <a href="https://wa.me/18321234567" target="_blank" class="sc-btn sc-btn-wa">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
+        Chat on WhatsApp
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-top">
+    <div class="footer-brand">
+      <div class="footer-brand-logo">
+        <div class="footer-brand-mark">DTR</div>
+        <span class="footer-brand-name">Dami The Realtor</span>
+      </div>
+      <p class="footer-brand-sub">Houston's Top 1% Real Estate Agent — helping buyers, sellers &amp; investors across Greater Houston, TX.</p>
+    </div>
+    <div class="footer-links">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="index.html#services">Services</a></li>
+        <li><a href="about.html">About Dami</a></li>
+        <li><a href="listings.html">Listings</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+    <div class="footer-links">
+      <h4>Partners</h4>
+      <ul>
+        <li><a href="https://www.har.com" target="_blank">HAR.com — MLS Search</a></li>
+        <li><a href="https://www.har.com" target="_blank">Houston Association of Realtors</a></li>
+      </ul>
+    </div>
+    <div class="footer-socials-block">
+      <h4>Follow Dami</h4>
+      <div class="footer-socials">
+        <a href="https://instagram.com/damitherealtor" target="_blank" class="social-btn" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
+        <a href="https://tiktok.com/@damitherealtor" target="_blank" class="social-btn" aria-label="TikTok"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 12a4 4 0 104 4V4a5 5 0 005 5"/></svg></a>
+        <a href="https://www.har.com" target="_blank" class="social-btn" aria-label="HAR.com"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg></a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="footer-copy">© 2025 <span>Dami The Realtor</span> · Dami Olatunde · All rights reserved</div>
+    <div class="footer-har">Proud partner of <a href="https://www.har.com" target="_blank">HAR.com</a> · Houston, TX</div>
+  </div>
+</footer>
+
+<script>
+// Nav scroll
+const navbar = document.getElementById('navbar');
+window.addEventListener('scroll', () => navbar.classList.toggle('scrolled', window.scrollY > 50));
+
+// Mobile menu
+const ham = document.getElementById('hamburger');
+const menu = document.getElementById('mobileMenu');
+let menuOpen = false;
+function toggleMenu(open) {
+  menuOpen = open;
+  menu.classList.toggle('open', open);
+  ham.classList.toggle('active', open);
+  document.body.style.overflow = open ? 'hidden' : '';
+}
+ham.addEventListener('click', e => { e.stopPropagation(); toggleMenu(!menuOpen); });
+document.querySelectorAll('.mobile-link').forEach(l => l.addEventListener('click', () => toggleMenu(false)));
+document.addEventListener('click', e => { if(menuOpen && !menu.contains(e.target) && !ham.contains(e.target)) toggleMenu(false); });
+
+// Reveal
+const reveals = document.querySelectorAll('.reveal');
+const obs = new IntersectionObserver(entries => {
+  entries.forEach((entry, i) => {
+    if(entry.isIntersecting) {
+      setTimeout(() => entry.target.classList.add('visible'), i * 70);
+      obs.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.08 });
+reveals.forEach(el => obs.observe(el));
+
+// Service chips
+function toggleChip(chip) {
+  chip.classList.toggle('selected');
+}
+
+// FAQ
+function toggleFaq(qEl) {
+  const item = qEl.closest('.faq-item');
+  const isOpen = item.classList.contains('open');
+  document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+  if(!isOpen) item.classList.add('open');
+}
+
+// Form submit
+document.getElementById('submitBtn').addEventListener('click', function() {
+  document.getElementById('formContent').style.display = 'none';
+  document.getElementById('successState').classList.add('show');
+});
+</script>
+</body>
+</html>
