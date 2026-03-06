@@ -18,25 +18,26 @@ html{scroll-behavior:smooth;}
 body{font-family:'Poppins',sans-serif;background:var(--white);color:var(--black);overflow-x:hidden;}
 
 /* NAV */
-nav{position:fixed;top:0;left:0;right:0;z-index:1000;padding:0 6%;height:74px;display:flex;align-items:center;justify-content:space-between;background:rgba(255,255,255,0.97);backdrop-filter:blur(20px);border-bottom:2px solid var(--gold);transition:height .3s,box-shadow .3s;}
-nav.scrolled{height:62px;box-shadow:0 4px 30px rgba(0,0,0,.08);}
+nav{position:fixed;top:0;left:0;right:0;z-index:1000;padding:0 6%;height:74px;display:flex;align-items:center;justify-content:space-between;background:rgba(13,13,13,0.96);backdrop-filter:blur(20px);border-bottom:2px solid var(--gold);transition:height .3s,box-shadow .3s;}
+nav.scrolled{height:62px;box-shadow:0 4px 30px rgba(0,0,0,.35);}
 .nav-logo{display:flex;align-items:center;gap:12px;text-decoration:none;}
+.nav-logo-img{height:38px;width:auto;display:block;object-fit:contain;}
 .nav-logo-mark{width:44px;height:44px;background:var(--black);border-radius:6px;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:15px;color:var(--gold);letter-spacing:-1px;flex-shrink:0;}
 .logo-text-wrap{display:flex;flex-direction:column;line-height:1.2;}
 .brand-name{font-size:13px;font-weight:700;letter-spacing:.07em;color:var(--black);text-transform:uppercase;}
 .brand-tagline{font-size:9px;letter-spacing:.2em;color:var(--gold);text-transform:uppercase;font-weight:500;}
 .nav-links{display:flex;align-items:center;gap:34px;list-style:none;}
-.nav-links a{font-size:11.5px;letter-spacing:.1em;text-transform:uppercase;font-weight:500;color:var(--black);text-decoration:none;position:relative;padding-bottom:4px;transition:color .25s;}
+.nav-links a{font-size:11.5px;letter-spacing:.1em;text-transform:uppercase;font-weight:500;color:rgba(255,255,255,0.75);text-decoration:none;position:relative;padding-bottom:4px;transition:color .25s;}
 .nav-links a::after{content:'';position:absolute;bottom:0;left:0;width:0;height:2px;background:var(--gold);transition:width .3s;}
-.nav-links a:hover{color:var(--gold-dark);}
+.nav-links a:hover{color:var(--gold);}
 .nav-links a:hover::after,.nav-links a.active::after{width:100%;}
 .nav-links a.active{color:var(--gold-dark);}
 .nav-cta{display:inline-flex !important;align-items:center !important;gap:7px !important;background:var(--gold) !important;color:var(--black) !important;padding:12px 22px !important;border-radius:6px !important;font-weight:700 !important;font-size:11.5px !important;letter-spacing:.08em !important;line-height:1 !important;transition:background .2s,transform .15s !important;}
 .nav-cta::after{display:none !important;}
 .nav-cta:hover{background:var(--gold-dark) !important;transform:translateY(-1px);}
-.nav-links li:last-child{padding-left:20px;margin-left:8px;border-left:1.5px solid var(--border);}
+.nav-links li:last-child{padding-left:20px;margin-left:8px;border-left:1.5px solid rgba(255,255,255,.12);}
 .hamburger{display:none;background:none;border:none;cursor:pointer;padding:6px;flex-direction:column;gap:5px;align-items:flex-end;}
-.hamburger span{display:block;height:2px;background:var(--black);border-radius:2px;transition:all .3s;}
+.hamburger span{display:block;height:2px;background:var(--white);border-radius:2px;transition:all .3s;}
 .hamburger span:nth-child(1){width:24px;}
 .hamburger span:nth-child(2){width:18px;}
 .hamburger span:nth-child(3){width:24px;}
@@ -235,11 +236,7 @@ footer{background:#080808;padding:50px 8%;border-top:2px solid var(--gold-dark);
 <!-- NAV -->
 <nav id="navbar">
   <a href="index.html" class="nav-logo">
-    <div class="nav-logo-mark">DTR</div>
-    <div class="logo-text-wrap">
-      <span class="brand-name">Dami The Realtor</span>
-      <span class="brand-tagline">Houston's Top 1% Agent</span>
-    </div>
+    <img src="logo.png" alt="Dami The Realtor" class="nav-logo-img"/>
   </a>
   <ul class="nav-links">
     <li><a href="index.html#services">Services</a></li>
@@ -284,9 +281,9 @@ footer{background:#080808;padding:50px 8%;border-top:2px solid var(--gold-dark);
           <div class="qr-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013 9.09a19.78 19.78 0 01-3.07-8.67A2 2 0 011.87 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 9.91"/></svg></div>
           <div><div class="qr-lbl">Call / Text</div><div class="qr-val">+1 (832) 123-4567</div></div>
         </a>
-        <a href="mailto:dami@damitherealtor.com" class="qr-item">
+        <a href="/cdn-cgi/l/email-protection#3357525e5a7357525e5a475b564156525f475c411d505c5e" class="qr-item">
           <div class="qr-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div>
-          <div><div class="qr-lbl">Email</div><div class="qr-val">dami@damitherealtor.com</div></div>
+          <div><div class="qr-lbl">Email</div><div class="qr-val"><span class="__cf_email__" data-cfemail="0165606c684165606c687569647364606d756e732f626e6c">[email&#160;protected]</span></div></div>
         </a>
         <a href="https://wa.me/18321234567" target="_blank" class="qr-item">
           <div class="qr-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg></div>
@@ -319,7 +316,7 @@ footer{background:#080808;padding:50px 8%;border-top:2px solid var(--gold-dark);
         <div class="ic-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div>
         <div>
           <div class="ic-lbl">Email</div>
-          <div class="ic-val"><a href="mailto:dami@damitherealtor.com">dami@damitherealtor.com</a></div>
+          <div class="ic-val"><a href="/cdn-cgi/l/email-protection#1d797c70745d797c70746975786f787c7169726f337e7270"><span class="__cf_email__" data-cfemail="bcd8ddd1d5fcd8ddd1d5c8d4d9ced9ddd0c8d3ce92dfd3d1">[email&#160;protected]</span></a></div>
         </div>
       </div>
       <div class="info-card">
@@ -525,7 +522,7 @@ footer{background:#080808;padding:50px 8%;border-top:2px solid var(--gold-dark);
   </div>
 </footer>
 
-<script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
 // Nav scroll
 const navbar = document.getElementById('navbar');
 window.addEventListener('scroll', () => navbar.classList.toggle('scrolled', window.scrollY > 50));
@@ -564,16 +561,4 @@ function toggleChip(chip) {
 // FAQ
 function toggleFaq(qEl) {
   const item = qEl.closest('.faq-item');
-  const isOpen = item.classList.contains('open');
-  document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
-  if(!isOpen) item.classList.add('open');
-}
-
-// Form submit
-document.getElementById('submitBtn').addEventListener('click', function() {
-  document.getElementById('formContent').style.display = 'none';
-  document.getElementById('successState').classList.add('show');
-});
-</script>
-</body>
-</html>
+  const isOpen = item.classList.con
