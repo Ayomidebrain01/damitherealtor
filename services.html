@@ -1,0 +1,741 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Services | Dami The Realtor — Houston, TX</title>
+<meta name="description" content="Explore all real estate services offered by Dami Olatunde — buying, selling, investment, foreign nationals, relocation, luxury properties, and more across Greater Houston, TX."/>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&display=swap" rel="stylesheet"/>
+<style>
+:root{
+  --gold:#C9A84C;--gold-dark:#A8873A;--gold-light:#E8C96A;--gold-pale:#FDF8EE;
+  --black:#0D0D0D;--black2:#1A1A1A;--black3:#2A2A2A;
+  --white:#FFFFFF;--off-white:#FAFAF7;--gray:#F5F4F0;
+  --text-muted:#777770;--border:#E8E6DF;
+}
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{font-family:'Poppins',sans-serif;background:var(--white);color:var(--black);overflow-x:hidden;}
+
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:1000;padding:0 6%;height:74px;display:flex;align-items:center;justify-content:space-between;background:rgba(13,13,13,0.96);backdrop-filter:blur(20px);border-bottom:2px solid var(--gold);transition:height .3s,box-shadow .3s;}
+nav.scrolled{height:62px;box-shadow:0 4px 30px rgba(0,0,0,.35);}
+.nav-logo{display:flex;align-items:center;gap:12px;text-decoration:none;}
+.nav-logo-img{height:38px;width:auto;display:block;object-fit:contain;}
+.nav-links{display:flex;align-items:center;gap:34px;list-style:none;}
+.nav-links a{font-size:11.5px;letter-spacing:.1em;text-transform:uppercase;font-weight:500;color:rgba(255,255,255,0.75);text-decoration:none;position:relative;padding-bottom:4px;transition:color .25s;}
+.nav-links a::after{content:'';position:absolute;bottom:0;left:0;width:0;height:2px;background:var(--gold);transition:width .3s;}
+.nav-links a:hover{color:var(--gold);}
+.nav-links a:hover::after,.nav-links a.active::after{width:100%;}
+.nav-links a.active{color:var(--gold);}
+.nav-cta{display:inline-flex !important;align-items:center !important;gap:7px !important;background:var(--gold) !important;color:var(--black) !important;padding:12px 22px !important;border-radius:6px !important;font-weight:700 !important;font-size:11.5px !important;letter-spacing:.08em !important;line-height:1 !important;transition:background .2s,transform .15s !important;}
+.nav-cta::after{display:none !important;}
+.nav-cta:hover{background:var(--gold-dark) !important;transform:translateY(-1px);}
+.nav-links li:last-child{padding-left:20px;margin-left:8px;border-left:1.5px solid rgba(255,255,255,.12);}
+.hamburger{display:none;background:none;border:none;cursor:pointer;padding:6px;flex-direction:column;gap:5px;align-items:flex-end;}
+.hamburger span{display:block;height:2px;background:var(--white);border-radius:2px;transition:all .3s;}
+.hamburger span:nth-child(1){width:24px;}
+.hamburger span:nth-child(2){width:18px;}
+.hamburger span:nth-child(3){width:24px;}
+.hamburger.active span:nth-child(1){transform:translateY(7px) rotate(45deg);width:24px;}
+.hamburger.active span:nth-child(2){opacity:0;width:0;}
+.hamburger.active span:nth-child(3){transform:translateY(-7px) rotate(-45deg);width:24px;}
+.mobile-menu{position:fixed;top:74px;left:0;right:0;bottom:0;background:var(--white);z-index:999;display:flex;flex-direction:column;padding:32px 6%;transform:translateX(100%);transition:transform .35s cubic-bezier(.4,0,.2,1);border-top:1px solid var(--border);overflow-y:auto;}
+.mobile-menu.open{transform:translateX(0);}
+.mobile-menu a{font-size:16px;font-weight:600;color:var(--black);text-decoration:none;letter-spacing:.05em;text-transform:uppercase;padding:20px 0;border-bottom:1px solid var(--border);display:flex;align-items:center;justify-content:space-between;transition:color .2s;}
+.mobile-menu a:hover{color:var(--gold);}
+.mobile-menu a .arrow{font-size:20px;color:var(--gold);}
+.mobile-cta-wrap{margin-top:36px;padding-bottom:40px;}
+.mobile-cta{display:flex !important;align-items:center;justify-content:center;gap:8px;width:100%;background:var(--gold);color:var(--black) !important;text-align:center;padding:20px;border-radius:8px;font-size:15px !important;font-weight:700 !important;letter-spacing:.1em !important;border-bottom:none !important;text-decoration:none;transition:background .2s;}
+.mobile-cta:hover{background:var(--gold-dark) !important;}
+
+/* PAGE HERO */
+.page-hero{padding-top:74px;background:var(--black);position:relative;overflow:hidden;}
+.page-hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 60% 40%, rgba(201,168,76,.08) 0%, transparent 70%);}
+.page-hero-inner{padding:80px 8% 72px;position:relative;z-index:1;}
+.breadcrumb{display:flex;align-items:center;gap:8px;margin-bottom:22px;}
+.breadcrumb a{font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:rgba(255,255,255,.35);text-decoration:none;transition:color .2s;}
+.breadcrumb a:hover{color:var(--gold);}
+.breadcrumb span{color:rgba(255,255,255,.15);font-size:11px;}
+.breadcrumb .current{font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);font-weight:600;}
+.ph-eyebrow{display:flex;align-items:center;gap:10px;margin-bottom:18px;}
+.ph-bar{width:30px;height:3px;background:var(--gold);border-radius:2px;}
+.ph-tag{font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);font-weight:600;}
+.ph-title{font-size:clamp(36px,4.5vw,64px);font-weight:700;color:var(--white);line-height:1.06;margin-bottom:16px;}
+.ph-title span{color:var(--gold);}
+.ph-sub{font-size:14px;color:rgba(255,255,255,.45);max-width:580px;line-height:1.85;}
+
+/* MARQUEE */
+.marquee-wrap{background:var(--gold);padding:14px 0;overflow:hidden;}
+.marquee-track{display:flex;animation:marquee 30s linear infinite;white-space:nowrap;}
+.marquee-item{display:flex;align-items:center;gap:24px;padding:0 24px;font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--black);font-weight:600;flex-shrink:0;}
+.m-dot{width:5px;height:5px;border-radius:50%;background:rgba(0,0,0,.3);flex-shrink:0;}
+@keyframes marquee{0%{transform:translateX(0);}100%{transform:translateX(-50%);}}
+
+/* SERVICE NAV PILLS */
+.service-nav{background:var(--white);border-bottom:1px solid var(--border);position:sticky;top:74px;z-index:100;padding:0 8%;}
+.service-nav-inner{display:flex;align-items:center;gap:0;overflow-x:auto;scrollbar-width:none;}
+.service-nav-inner::-webkit-scrollbar{display:none;}
+.snav-link{padding:18px 20px;font-size:11px;letter-spacing:.14em;text-transform:uppercase;font-weight:600;color:var(--text-muted);cursor:pointer;border-bottom:2px solid transparent;white-space:nowrap;transition:color .2s,border-color .2s;text-decoration:none;display:block;}
+.snav-link:hover,.snav-link.active{color:var(--gold-dark);border-bottom-color:var(--gold);}
+
+/* SERVICES INTRO GRID */
+.services-intro{padding:90px 8%;background:var(--off-white);}
+.si-header{display:flex;align-items:flex-end;justify-content:space-between;margin-bottom:64px;flex-wrap:wrap;gap:24px;}
+.sec-eyebrow{display:flex;align-items:center;gap:10px;margin-bottom:12px;}
+.sec-bar{width:30px;height:3px;background:var(--gold);border-radius:2px;}
+.sec-tag{font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold-dark);font-weight:600;}
+.sec-title{font-size:clamp(28px,3.2vw,46px);font-weight:700;line-height:1.15;color:var(--black);}
+.sec-title span{color:var(--gold);}
+.si-desc{max-width:360px;font-size:14px;line-height:1.8;color:var(--text-muted);}
+.services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;}
+.svc-card{background:var(--white);padding:44px 34px;position:relative;overflow:hidden;transition:transform .3s;border-bottom:3px solid transparent;}
+.svc-card:hover{transform:translateY(-5px);border-bottom-color:var(--gold);}
+.svc-num{font-size:52px;font-weight:700;color:#F0EEE8;line-height:1;margin-bottom:20px;transition:color .3s;}
+.svc-card:hover .svc-num{color:#EDD98A;}
+.svc-icon{width:44px;height:44px;margin-bottom:16px;}
+.svc-name{font-size:17px;font-weight:700;color:var(--black);margin-bottom:10px;}
+.svc-text{font-size:13px;line-height:1.8;color:var(--text-muted);}
+.svc-link{display:inline-flex;align-items:center;gap:6px;margin-top:18px;font-size:11px;letter-spacing:.12em;text-transform:uppercase;font-weight:700;color:var(--gold-dark);text-decoration:none;border-bottom:1px solid var(--gold);padding-bottom:2px;transition:color .2s;}
+.svc-link:hover{color:var(--gold);}
+
+/* DEEP SERVICE SECTIONS */
+.svc-section{padding:100px 8%;display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center;}
+.svc-section.reverse{direction:rtl;}
+.svc-section.reverse > *{direction:ltr;}
+.svc-section.dark{background:var(--black);}
+.svc-section.light{background:var(--white);}
+.svc-section.pale{background:var(--gold-pale);}
+.svc-visual{position:relative;}
+.svc-img-box{width:100%;aspect-ratio:4/3;border-radius:8px;background:linear-gradient(135deg,#e8e6df,#d4d1c8);display:flex;align-items:center;justify-content:center;overflow:hidden;}
+.svc-img-box.dark-bg{background:linear-gradient(135deg,#1a1a1a,#2a2a2a);}
+.svc-img-box svg{width:64px;height:64px;color:rgba(0,0,0,.1);}
+.svc-img-box.dark-bg svg{color:rgba(255,255,255,.08);}
+.svc-accent-badge{position:absolute;bottom:-20px;right:-20px;background:var(--gold);padding:20px 24px;border-radius:6px;text-align:center;}
+.svc-accent-badge .ab-num{font-size:28px;font-weight:700;color:var(--black);line-height:1;}
+.svc-accent-badge .ab-lbl{font-size:9px;letter-spacing:.14em;text-transform:uppercase;color:rgba(0,0,0,.6);font-weight:600;margin-top:3px;}
+.svc-content{}
+.svc-content.dark-text .sec-title{color:var(--white);}
+.svc-content.dark-text .sec-tag{color:var(--gold);}
+.svc-content.dark-text .sec-bar{background:var(--gold);}
+.svc-content.dark-text p{color:rgba(255,255,255,.55);}
+.svc-content.dark-text .svc-includes-title{color:rgba(255,255,255,.3);}
+.svc-content.dark-text .inc-item{color:rgba(255,255,255,.7);background:rgba(255,255,255,.04);border-color:rgba(255,255,255,.08);}
+.svc-content.dark-text .inc-item::before{color:var(--gold);}
+.svc-body{font-size:14px;line-height:1.95;color:var(--text-muted);margin-bottom:28px;}
+.svc-includes-title{font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--text-muted);font-weight:600;margin-bottom:14px;}
+.svc-includes{display:flex;flex-direction:column;gap:8px;margin-bottom:30px;}
+.inc-item{display:flex;align-items:flex-start;gap:10px;font-size:13px;color:var(--black);background:var(--off-white);border:1px solid var(--border);padding:11px 14px;border-radius:4px;line-height:1.5;}
+.inc-item::before{content:'✓';color:var(--gold-dark);font-weight:700;flex-shrink:0;font-size:12px;margin-top:1px;}
+.btn-gold{background:var(--gold);color:var(--black);padding:14px 28px;font-size:12px;letter-spacing:.14em;text-transform:uppercase;font-weight:700;border-radius:4px;text-decoration:none;transition:background .25s,transform .2s;display:inline-flex;align-items:center;gap:8px;}
+.btn-gold:hover{background:var(--gold-dark);transform:translateY(-2px);}
+.btn-ghost-gold{border:2px solid var(--gold);color:var(--gold);padding:13px 26px;font-size:12px;letter-spacing:.14em;text-transform:uppercase;font-weight:700;border-radius:4px;text-decoration:none;transition:all .25s;display:inline-flex;align-items:center;gap:8px;}
+.btn-ghost-gold:hover{background:var(--gold);color:var(--black);}
+.svc-btns{display:flex;gap:12px;flex-wrap:wrap;}
+
+/* FOREIGN NATIONALS CALLOUT */
+.foreign-callout{padding:90px 8%;background:var(--black);position:relative;overflow:hidden;}
+.foreign-callout::before{content:'';position:absolute;top:0;right:0;width:40%;height:100%;background:radial-gradient(ellipse at right, rgba(201,168,76,.06) 0%, transparent 70%);}
+.fc-inner{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center;position:relative;z-index:1;}
+.fc-left{}
+.fc-title{font-size:clamp(28px,3.2vw,46px);font-weight:700;color:var(--white);line-height:1.15;margin-bottom:16px;}
+.fc-title span{color:var(--gold);}
+.fc-sub{font-size:14px;color:rgba(255,255,255,.45);line-height:1.9;margin-bottom:30px;}
+.fc-right{display:flex;flex-direction:column;gap:14px;}
+.fc-stat{display:flex;align-items:flex-start;gap:16px;padding:20px 22px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:6px;transition:border-color .25s;}
+.fc-stat:hover{border-color:var(--gold);}
+.fc-stat-icon{width:40px;height:40px;background:rgba(201,168,76,.1);border-radius:4px;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+.fc-stat-icon svg{width:18px;height:18px;color:var(--gold);}
+.fc-stat-title{font-size:13px;font-weight:700;color:var(--white);margin-bottom:4px;}
+.fc-stat-text{font-size:12px;color:rgba(255,255,255,.45);line-height:1.6;}
+
+/* PROCESS STEPS */
+.process{padding:100px 8%;background:var(--off-white);}
+.process-header{text-align:center;margin-bottom:70px;}
+.steps-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:0;position:relative;}
+.steps-grid::before{content:'';position:absolute;top:36px;left:10%;right:10%;height:2px;background:linear-gradient(90deg,var(--gold),rgba(201,168,76,.2));z-index:0;}
+.step{display:flex;flex-direction:column;align-items:center;text-align:center;padding:0 20px;position:relative;z-index:1;}
+.step-circle{width:72px;height:72px;border-radius:50%;background:var(--white);border:3px solid var(--gold);display:flex;align-items:center;justify-content:center;margin-bottom:20px;font-size:20px;font-weight:700;color:var(--gold-dark);box-shadow:0 4px 20px rgba(201,168,76,.15);}
+.step-title{font-size:14px;font-weight:700;color:var(--black);margin-bottom:8px;}
+.step-text{font-size:12px;line-height:1.7;color:var(--text-muted);}
+
+/* CTA BAND */
+.cta-band{padding:100px 8%;background:var(--gold-pale);display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center;border-top:1px solid var(--border);}
+.cta-title{font-size:clamp(28px,3vw,46px);font-weight:700;line-height:1.15;color:var(--black);}
+.cta-title span{color:var(--gold-dark);}
+.cta-right{display:flex;flex-direction:column;gap:20px;}
+.cta-text{font-size:14px;line-height:1.9;color:var(--text-muted);}
+.cta-btns{display:flex;gap:14px;flex-wrap:wrap;}
+.btn-black{background:var(--black);color:var(--white);padding:14px 28px;font-size:12px;letter-spacing:.14em;text-transform:uppercase;font-weight:600;border-radius:4px;text-decoration:none;transition:all .25s;display:inline-block;}
+.btn-black:hover{background:var(--black2);transform:translateY(-2px);}
+
+/* REVEAL */
+.reveal{opacity:0;transform:translateY(26px);transition:opacity .6s ease,transform .6s ease;}
+.reveal.visible{opacity:1;transform:translateY(0);}
+
+/* FOOTER */
+footer{background:#080808;padding:50px 8%;border-top:2px solid var(--gold-dark);}
+.footer-top{display:flex;align-items:flex-start;justify-content:space-between;flex-wrap:wrap;gap:40px;margin-bottom:40px;}
+.footer-brand-logo{display:flex;align-items:center;gap:10px;margin-bottom:12px;}
+.footer-brand-mark{width:38px;height:38px;background:var(--gold);border-radius:4px;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:13px;color:var(--black);}
+.footer-brand-name{font-size:14px;font-weight:700;color:var(--white);letter-spacing:.06em;text-transform:uppercase;}
+.footer-brand-sub{font-size:12px;color:rgba(255,255,255,.3);max-width:240px;line-height:1.65;}
+.footer-links h4{font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);font-weight:600;margin-bottom:16px;}
+.footer-links ul{list-style:none;display:flex;flex-direction:column;gap:10px;}
+.footer-links ul a{font-size:13px;color:rgba(255,255,255,.45);text-decoration:none;transition:color .2s;}
+.footer-links ul a:hover{color:var(--gold);}
+.footer-socials-block h4{font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);font-weight:600;margin-bottom:16px;}
+.footer-socials{display:flex;gap:10px;}
+.social-btn{width:38px;height:38px;border:1px solid rgba(255,255,255,.1);display:flex;align-items:center;justify-content:center;border-radius:4px;color:rgba(255,255,255,.5);transition:all .2s;text-decoration:none;}
+.social-btn svg{width:16px;height:16px;}
+.social-btn:hover{border-color:var(--gold);color:var(--gold);}
+.footer-bottom{display:flex;align-items:center;justify-content:space-between;padding-top:28px;border-top:1px solid rgba(255,255,255,.06);flex-wrap:wrap;gap:10px;}
+.footer-copy{font-size:12px;color:rgba(255,255,255,.25);}
+.footer-copy span{color:rgba(255,255,255,.5);}
+.footer-har{font-size:12px;color:rgba(255,255,255,.25);}
+.footer-har a{color:var(--gold);text-decoration:none;}
+
+/* RESPONSIVE */
+@media(max-width:1024px){
+  .svc-section{grid-template-columns:1fr;gap:50px;}
+  .svc-section.reverse{direction:ltr;}
+  .fc-inner{grid-template-columns:1fr;}
+  .cta-band{grid-template-columns:1fr;}
+  .steps-grid{grid-template-columns:repeat(2,1fr);gap:40px;}
+  .steps-grid::before{display:none;}
+  .services-grid{grid-template-columns:repeat(2,1fr);}
+}
+@media(max-width:768px){
+  .hamburger{display:flex;}
+  .nav-links{display:none;}
+  .page-hero-inner{padding:60px 5% 50px;}
+  .services-intro,.svc-section,.foreign-callout,.process,.cta-band{padding:70px 5%;}
+  .services-grid{grid-template-columns:1fr;}
+  .steps-grid{grid-template-columns:1fr;gap:30px;}
+  .svc-accent-badge{bottom:-10px;right:-10px;padding:14px 18px;}
+  footer{padding:40px 5%;}
+  .footer-top{flex-direction:column;gap:30px;}
+  .footer-bottom{flex-direction:column;align-items:flex-start;gap:8px;}
+}
+@media(max-width:480px){
+  nav{padding:0 5%;}
+  .svc-btns{flex-direction:column;align-items:stretch;}
+  .btn-gold,.btn-ghost-gold,.btn-black{text-align:center;justify-content:center;width:100%;}
+  .cta-btns{flex-direction:column;align-items:stretch;}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="navbar">
+  <a href="index.html" class="nav-logo">
+    <img src="logo.png" alt="Dami The Realtor" class="nav-logo-img"/>
+  </a>
+  <ul class="nav-links">
+    <li><a href="services.html" class="active">Services</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="listings.html">Listings</a></li>
+    <li><a href="index.html#instagram">Connect</a></li>
+    <li><a href="contact.html" class="nav-cta">Let's Talk</a></li>
+  </ul>
+  <button class="hamburger" id="hamburger" aria-label="Open menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobileMenu">
+  <a href="services.html" class="mobile-link">Services <span class="arrow">›</span></a>
+  <a href="about.html" class="mobile-link">About <span class="arrow">›</span></a>
+  <a href="listings.html" class="mobile-link">Listings <span class="arrow">›</span></a>
+  <a href="index.html#instagram" class="mobile-link">Connect <span class="arrow">›</span></a>
+  <div class="mobile-cta-wrap">
+    <a href="contact.html" class="mobile-cta mobile-link">Let's Talk →</a>
+  </div>
+</div>
+
+<!-- PAGE HERO -->
+<section class="page-hero">
+  <div class="page-hero-inner">
+    <div class="breadcrumb">
+      <a href="index.html">Home</a>
+      <span>›</span>
+      <span class="current">Services</span>
+    </div>
+    <div class="ph-eyebrow"><div class="ph-bar"></div><span class="ph-tag">What Dami Does</span></div>
+    <h1 class="ph-title">Every Service You Need.<br/><span>One Agent You Can Trust.</span></h1>
+    <p class="ph-sub">Whether you're buying your first home, selling a luxury estate, investing from abroad, or relocating to Houston — Dami Olatunde has the expertise, network, and drive to make it happen.</p>
+  </div>
+</section>
+
+<!-- MARQUEE -->
+<div class="marquee-wrap" aria-hidden="true">
+  <div class="marquee-track">
+    <div class="marquee-item">Home Buying <div class="m-dot"></div></div>
+    <div class="marquee-item">Home Selling <div class="m-dot"></div></div>
+    <div class="marquee-item">Real Estate Investment <div class="m-dot"></div></div>
+    <div class="marquee-item">Foreign Nationals <div class="m-dot"></div></div>
+    <div class="marquee-item">Relocation Services <div class="m-dot"></div></div>
+    <div class="marquee-item">Luxury Properties <div class="m-dot"></div></div>
+    <div class="marquee-item">Tenant Placement <div class="m-dot"></div></div>
+    <div class="marquee-item">MLS via HAR.com <div class="m-dot"></div></div>
+    <div class="marquee-item">Home Buying <div class="m-dot"></div></div>
+    <div class="marquee-item">Home Selling <div class="m-dot"></div></div>
+    <div class="marquee-item">Real Estate Investment <div class="m-dot"></div></div>
+    <div class="marquee-item">Foreign Nationals <div class="m-dot"></div></div>
+    <div class="marquee-item">Relocation Services <div class="m-dot"></div></div>
+    <div class="marquee-item">Luxury Properties <div class="m-dot"></div></div>
+    <div class="marquee-item">Tenant Placement <div class="m-dot"></div></div>
+    <div class="marquee-item">MLS via HAR.com <div class="m-dot"></div></div>
+  </div>
+</div>
+
+<!-- QUICK NAV -->
+<nav class="service-nav">
+  <div class="service-nav-inner">
+    <a href="#buying" class="snav-link">Buying</a>
+    <a href="#selling" class="snav-link">Selling</a>
+    <a href="#investment" class="snav-link">Investment</a>
+    <a href="#foreign" class="snav-link">Foreign Nationals</a>
+    <a href="#relocation" class="snav-link">Relocation</a>
+    <a href="#luxury" class="snav-link">Luxury</a>
+    <a href="#tenant" class="snav-link">Tenant Placement</a>
+  </div>
+</nav>
+
+<!-- SERVICES OVERVIEW GRID -->
+<section class="services-intro">
+  <div class="si-header reveal">
+    <div>
+      <div class="sec-eyebrow"><div class="sec-bar"></div><span class="sec-tag">Full Service Offering</span></div>
+      <h2 class="sec-title">Everything You Need,<br/><span>Under One Roof</span></h2>
+    </div>
+    <p class="si-desc">From first consultation to closing day — and everything after — Dami is your single point of contact for all things Houston real estate.</p>
+  </div>
+  <div class="services-grid">
+    <div class="svc-card reveal">
+      <div class="svc-num">01</div>
+      <svg class="svc-icon" viewBox="0 0 44 44" fill="none"><path d="M6 22L22 8l16 14v16H28v-10h-12v10H6z" stroke="#C9A84C" stroke-width="2" stroke-linejoin="round"/></svg>
+      <h3 class="svc-name">Home Buying</h3>
+      <p class="svc-text">First-time buyer or upgrading — Dami guides you through every Houston neighbourhood to find the perfect property at the right price.</p>
+      <a href="#buying" class="svc-link">Learn More →</a>
+    </div>
+    <div class="svc-card reveal">
+      <div class="svc-num">02</div>
+      <svg class="svc-icon" viewBox="0 0 44 44" fill="none"><path d="M8 34l8-8m0 0l6-6m-6 6l-4-4m10-2l8-8m0 0l4 4m-4-4l-4 4" stroke="#C9A84C" stroke-width="2" stroke-linecap="round"/><circle cx="30" cy="14" r="6" stroke="#C9A84C" stroke-width="2"/></svg>
+      <h3 class="svc-name">Home Selling</h3>
+      <p class="svc-text">Strategic pricing, professional marketing, and Dami's 86.5K social audience — your listing gets maximum exposure and the best possible offer.</p>
+      <a href="#selling" class="svc-link">Learn More →</a>
+    </div>
+    <div class="svc-card reveal">
+      <div class="svc-num">03</div>
+      <svg class="svc-icon" viewBox="0 0 44 44" fill="none"><circle cx="22" cy="22" r="14" stroke="#C9A84C" stroke-width="2"/><path d="M22 14v8l6 4" stroke="#C9A84C" stroke-width="2" stroke-linecap="round"/></svg>
+      <h3 class="svc-name">Real Estate Investment</h3>
+      <p class="svc-text">Single-family, multi-unit, DSCR loans, LLC purchases — Dami identifies high-ROI opportunities backed by real data and deep local knowledge.</p>
+      <a href="#investment" class="svc-link">Learn More →</a>
+    </div>
+    <div class="svc-card reveal">
+      <div class="svc-num">04</div>
+      <svg class="svc-icon" viewBox="0 0 44 44" fill="none"><circle cx="22" cy="14" r="6" stroke="#C9A84C" stroke-width="2"/><path d="M8 36c0-7.732 6.268-14 14-14s14 6.268 14 14" stroke="#C9A84C" stroke-width="2" stroke-linecap="round"/><path d="M30 10l4 4-4 4" stroke="#C9A84C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <h3 class="svc-name">Foreign Nationals</h3>
+      <p class="svc-text">Buying from outside the US? Dami has a proven, step-by-step process for international buyers — including 35% financing, video tours, and remote closing.</p>
+      <a href="#foreign" class="svc-link">Learn More →</a>
+    </div>
+    <div class="svc-card reveal">
+      <div class="svc-num">05</div>
+      <svg class="svc-icon" viewBox="0 0 44 44" fill="none"><rect x="8" y="14" width="28" height="20" rx="1" stroke="#C9A84C" stroke-width="2"/><path d="M14 14V10a8 8 0 0116 0v4" stroke="#C9A84C" stroke-width="2" stroke-linecap="round"/><circle cx="22" cy="24" r="3" stroke="#C9A84C" stroke-width="2"/></svg>
+      <h3 class="svc-name">Relocation Services</h3>
+      <p class="svc-text">Moving to Houston from another state or country? Dami specialises in seamless relocations — from neighbourhood matchmaking to school districts and community connections.</p>
+      <a href="#relocation" class="svc-link">Learn More →</a>
+    </div>
+    <div class="svc-card reveal">
+      <div class="svc-num">06</div>
+      <svg class="svc-icon" viewBox="0 0 44 44" fill="none"><path d="M22 8l3 8h8l-6.5 5 2.5 8L22 24l-7 5 2.5-8L11 16h8z" stroke="#C9A84C" stroke-width="2" stroke-linejoin="round"/></svg>
+      <h3 class="svc-name">Luxury Properties</h3>
+      <p class="svc-text">River Oaks. Tanglewood. Memorial. The Galleria. Dami's expertise in Houston's luxury tier means white-glove service from the first showing to the final close.</p>
+      <a href="#luxury" class="svc-link">Learn More →</a>
+    </div>
+    <div class="svc-card reveal">
+      <div class="svc-num">07</div>
+      <svg class="svc-icon" viewBox="0 0 44 44" fill="none"><path d="M12 34V20l10-8 10 8v14H26v-8h-8v8z" stroke="#C9A84C" stroke-width="2" stroke-linejoin="round"/><circle cx="22" cy="10" r="4" stroke="#C9A84C" stroke-width="2"/></svg>
+      <h3 class="svc-name">Tenant Placement</h3>
+      <p class="svc-text">Own a rental property? Dami lists it on the MLS, markets it widely, and vets every applicant with full credit and background checks.</p>
+      <a href="#tenant" class="svc-link">Learn More →</a>
+    </div>
+    <div class="svc-card reveal">
+      <div class="svc-num">08</div>
+      <svg class="svc-icon" viewBox="0 0 44 44" fill="none"><path d="M12 34V20l10-8 10 8v14H26v-8h-8v8z" stroke="#C9A84C" stroke-width="2" stroke-linejoin="round"/><path d="M6 22l16-14 16 14" stroke="#C9A84C" stroke-width="2" stroke-linecap="round"/></svg>
+      <h3 class="svc-name">MLS Search via HAR.com</h3>
+      <p class="svc-text">As an official HAR.com partner, Dami gives you full access to Houston's MLS — every active, pending, and off-market listing at your fingertips.</p>
+      <a href="https://www.har.com" target="_blank" class="svc-link">Search HAR.com →</a>
+    </div>
+  </div>
+</section>
+
+<!-- 01 — HOME BUYING -->
+<section class="svc-section light" id="buying">
+  <div class="svc-visual reveal">
+    <div class="svc-img-box">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+    </div>
+    <div class="svc-accent-badge">
+      <div class="ab-num">120+</div>
+      <div class="ab-lbl">Homes Bought</div>
+    </div>
+  </div>
+  <div class="svc-content reveal">
+    <div class="sec-eyebrow"><div class="sec-bar"></div><span class="sec-tag">Service 01</span></div>
+    <h2 class="sec-title">Home <span>Buying</span></h2>
+    <p class="svc-body">Whether you're a first-time buyer, upgrading to your forever home, or purchasing as a primary residence — Dami takes the stress out of one of life's biggest decisions. He listens, he researches, he negotiates, and he delivers.</p>
+    <div class="svc-includes-title">What's Included</div>
+    <div class="svc-includes">
+      <div class="inc-item">Free initial consultation to understand your needs, budget, and timeline</div>
+      <div class="inc-item">Neighbourhood-by-neighbourhood guidance across all of Greater Houston</div>
+      <div class="inc-item">Full MLS access via HAR.com — every listing, on and off market</div>
+      <div class="inc-item">In-person and virtual property tours with honest, detailed feedback</div>
+      <div class="inc-item">Expert offer strategy and aggressive negotiation on your behalf</div>
+      <div class="inc-item">Loan officer referrals and pre-approval support</div>
+      <div class="inc-item">Guidance through inspections, appraisals, and closing day</div>
+    </div>
+    <div class="svc-btns">
+      <a href="contact.html" class="btn-gold">Start Buying →</a>
+      <a href="listings.html" class="btn-ghost-gold">Browse Listings</a>
+    </div>
+  </div>
+</section>
+
+<!-- 02 — HOME SELLING -->
+<section class="svc-section dark reverse" id="selling">
+  <div class="svc-visual reveal">
+    <div class="svc-img-box dark-bg">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg>
+    </div>
+    <div class="svc-accent-badge">
+      <div class="ab-num">8 Days</div>
+      <div class="ab-lbl">Avg. on Market</div>
+    </div>
+  </div>
+  <div class="svc-content dark-text reveal">
+    <div class="sec-eyebrow"><div class="sec-bar"></div><span class="sec-tag">Service 02</span></div>
+    <h2 class="sec-title">Home <span>Selling</span></h2>
+    <p class="svc-body">Dami doesn't just list your home — he launches it. With a combination of data-driven pricing, professional staging guidance, and a social media audience of 86,500+ engaged followers, your property gets seen, shown, and sold.</p>
+    <div class="svc-includes-title">What's Included</div>
+    <div class="svc-includes">
+      <div class="inc-item">Comparative Market Analysis (CMA) for accurate, strategic pricing</div>
+      <div class="inc-item">Professional photography and video tour coordination</div>
+      <div class="inc-item">MLS listing on HAR.com — Houston's #1 property platform</div>
+      <div class="inc-item">Social media promotion to 86,500+ Instagram followers</div>
+      <div class="inc-item">Buyer vetting, offer review, and counter-offer negotiation</div>
+      <div class="inc-item">Transaction management from contract to closing</div>
+      <div class="inc-item">New, Sold, and Rented badge showcase on all platforms</div>
+    </div>
+    <div class="svc-btns">
+      <a href="contact.html" class="btn-gold">List Your Property →</a>
+    </div>
+  </div>
+</section>
+
+<!-- 03 — INVESTMENT -->
+<section class="svc-section pale" id="investment">
+  <div class="svc-visual reveal">
+    <div class="svc-img-box" style="background:linear-gradient(135deg,#f5f0e0,#e8dfc0);">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg>
+    </div>
+    <div class="svc-accent-badge">
+      <div class="ab-num">3–20</div>
+      <div class="ab-lbl">Units per Deal</div>
+    </div>
+  </div>
+  <div class="svc-content reveal">
+    <div class="sec-eyebrow"><div class="sec-bar"></div><span class="sec-tag">Service 03</span></div>
+    <h2 class="sec-title">Real Estate <span>Investment</span></h2>
+    <p class="svc-body">Houston is one of the strongest investment markets in the US — and Dami knows exactly where the opportunities are. From single-family rentals to portfolio acquisitions of up to 20 units under one loan, he helps investors build wealth the smart way.</p>
+    <div class="svc-includes-title">What's Included</div>
+    <div class="svc-includes">
+      <div class="inc-item">Single-family, duplex, triplex, quadplex, and 1–10 unit acquisitions</div>
+      <div class="inc-item">Portfolio deals — buy 3 to 20 properties under 1 loan, 1 transaction</div>
+      <div class="inc-item">Conventional, Bank Statement, and DSCR loan referrals</div>
+      <div class="inc-item">LLC purchase guidance through loan officer partners</div>
+      <div class="inc-item">Cash flow analysis and neighbourhood investment data</div>
+      <div class="inc-item">Short-term (Airbnb) and long-term rental strategy</div>
+      <div class="inc-item">Property management partner referrals — fully hands-free</div>
+    </div>
+    <div class="svc-btns">
+      <a href="contact.html" class="btn-gold">Start Investing →</a>
+      <a href="contact.html#faq-investors" class="btn-ghost-gold">Investor FAQs</a>
+    </div>
+  </div>
+</section>
+
+<!-- 04 — FOREIGN NATIONALS CALLOUT -->
+<section class="foreign-callout" id="foreign">
+  <div class="fc-inner">
+    <div class="fc-left reveal">
+      <div class="sec-eyebrow"><div class="sec-bar" style="background:var(--gold)"></div><span class="sec-tag" style="color:var(--gold)">Service 04</span></div>
+      <h2 class="fc-title">Buying from <span>Outside the US?</span><br/>Dami Has You Covered.</h2>
+      <p class="fc-sub">You don't need to be in America to own a piece of Houston. Dami has a proven, step-by-step process for foreign national buyers — from bank statement qualification to remote closing at your local US Embassy.</p>
+      <div class="svc-btns">
+        <a href="contact.html" class="btn-gold">Enquire Now →</a>
+        <a href="contact.html" class="btn-ghost-gold" style="border-color:rgba(255,255,255,.25);color:rgba(255,255,255,.75);" onmouseover="this.style.background='rgba(255,255,255,.08)'" onmouseout="this.style.background='transparent'">Read the FAQ</a>
+      </div>
+    </div>
+    <div class="fc-right reveal">
+      <div class="fc-stat">
+        <div class="fc-stat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg></div>
+        <div>
+          <div class="fc-stat-title">35% Down Payment</div>
+          <div class="fc-stat-text">Covers your down payment, closing costs, inspection, and appraisal — all in one. The remaining 65% is financed through Dami's loan partners.</div>
+        </div>
+      </div>
+      <div class="fc-stat">
+        <div class="fc-stat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+        <div>
+          <div class="fc-stat-title">No US Presence Required</div>
+          <div class="fc-stat-text">Close from your home country at your nearest US Embassy. Dami handles video tours, documents, and coordinates everything remotely.</div>
+        </div>
+      </div>
+      <div class="fc-stat">
+        <div class="fc-stat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013 9.09a19.78 19.78 0 01-3.07-8.67A2 2 0 011.87 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 9.91"/></svg></div>
+        <div>
+          <div class="fc-stat-title">Direct WhatsApp Access</div>
+          <div class="fc-stat-text">Call, text, or WhatsApp Dami at +1-832-955-8008. He works across time zones and responds personally — no gatekeeping.</div>
+        </div>
+      </div>
+      <div class="fc-stat">
+        <div class="fc-stat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg></div>
+        <div>
+          <div class="fc-stat-title">Seller Usually Pays Dami's Fee</div>
+          <div class="fc-stat-text">In 9 out of 10 transactions, the seller covers Dami's 3% fee — meaning you pay nothing extra to work with Houston's top 1% agent.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 05 — RELOCATION -->
+<section class="svc-section light" id="relocation">
+  <div class="svc-visual reveal">
+    <div class="svc-img-box">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><rect x="1" y="3" width="15" height="13" rx="2"/><path d="M16 8h6l2 3v4h-8V8z"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+    </div>
+    <div class="svc-accent-badge">
+      <div class="ab-num">20+</div>
+      <div class="ab-lbl">Neighbourhoods</div>
+    </div>
+  </div>
+  <div class="svc-content reveal">
+    <div class="sec-eyebrow"><div class="sec-bar"></div><span class="sec-tag">Service 05</span></div>
+    <h2 class="sec-title">Relocation <span>Services</span></h2>
+    <p class="svc-body">Moving to Houston is exciting — but it can be overwhelming without the right guide. Dami specialises in helping individuals and families from other states and countries settle into the right Houston neighbourhood from day one.</p>
+    <div class="svc-includes-title">What's Included</div>
+    <div class="svc-includes">
+      <div class="inc-item">Deep-dive neighbourhood matching based on lifestyle, commute, and schools</div>
+      <div class="inc-item">Virtual tours and remote property walkthroughs for out-of-state buyers</div>
+      <div class="inc-item">School district research and community recommendations</div>
+      <div class="inc-item">Full remote buying process — no need to be in Houston to start</div>
+      <div class="inc-item">Coordination with out-of-state attorneys and lenders</div>
+      <div class="inc-item">Post-move local service partner referrals</div>
+    </div>
+    <div class="svc-btns">
+      <a href="contact.html" class="btn-gold">Plan Your Move →</a>
+    </div>
+  </div>
+</section>
+
+<!-- 06 — LUXURY -->
+<section class="svc-section dark reverse" id="luxury">
+  <div class="svc-visual reveal">
+    <div class="svc-img-box dark-bg">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+    </div>
+    <div class="svc-accent-badge">
+      <div class="ab-num">$60M+</div>
+      <div class="ab-lbl">Total Sales</div>
+    </div>
+  </div>
+  <div class="svc-content dark-text reveal">
+    <div class="sec-eyebrow"><div class="sec-bar"></div><span class="sec-tag">Service 06</span></div>
+    <h2 class="sec-title">Luxury <span>Properties</span></h2>
+    <p class="svc-body">Dami operates at the top end of Houston's market — River Oaks, Tanglewood, Memorial, The Galleria, and West University Place. Whether you're buying a trophy home or selling an estate, he brings the white-glove approach every premium transaction demands.</p>
+    <div class="svc-includes-title">What's Included</div>
+    <div class="svc-includes">
+      <div class="inc-item">Exclusive access to off-market luxury listings</div>
+      <div class="inc-item">Luxury-specific marketing — cinematic video, drone photography</div>
+      <div class="inc-item">Discreet, confidential representation for high-net-worth clients</div>
+      <div class="inc-item">Expert pricing of luxury assets in Houston's premium corridors</div>
+      <div class="inc-item">High-calibre buyer network and private showing coordination</div>
+      <div class="inc-item">Premium open house events and bespoke property marketing</div>
+    </div>
+    <div class="svc-btns">
+      <a href="listings.html" class="btn-gold">View Luxury Listings →</a>
+    </div>
+  </div>
+</section>
+
+<!-- 07 — TENANT PLACEMENT -->
+<section class="svc-section pale" id="tenant">
+  <div class="svc-visual reveal">
+    <div class="svc-img-box" style="background:linear-gradient(135deg,#f5f0e0,#e8dfc0);">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg>
+    </div>
+    <div class="svc-accent-badge">
+      <div class="ab-num">Full</div>
+      <div class="ab-lbl">Vetting Process</div>
+    </div>
+  </div>
+  <div class="svc-content reveal">
+    <div class="sec-eyebrow"><div class="sec-bar"></div><span class="sec-tag">Service 07</span></div>
+    <h2 class="sec-title">Tenant <span>Placement</span></h2>
+    <p class="svc-body">You've bought the investment property — now you need the right tenant to protect it. Dami doesn't just fill vacancies; he finds you qualified, vetted tenants who pay on time and treat your property with respect.</p>
+    <div class="svc-includes-title">What's Included</div>
+    <div class="svc-includes">
+      <div class="inc-item">MLS listing and multi-platform property marketing</div>
+      <div class="inc-item">Professional photography to attract premium tenants</div>
+      <div class="inc-item">Full credit check on every applicant</div>
+      <div class="inc-item">Criminal background and rental history verification</div>
+      <div class="inc-item">Income and employment verification</div>
+      <div class="inc-item">Property management partner referrals for ongoing management</div>
+    </div>
+    <div class="svc-btns">
+      <a href="contact.html" class="btn-gold">Find a Tenant →</a>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section class="process">
+  <div class="process-header reveal">
+    <div class="sec-eyebrow" style="justify-content:center;"><div class="sec-bar"></div><span class="sec-tag">How It Works</span></div>
+    <h2 class="sec-title" style="text-align:center;">From First Call to <span>Closing Day</span></h2>
+  </div>
+  <div class="steps-grid">
+    <div class="step reveal">
+      <div class="step-circle">01</div>
+      <div class="step-title">Consultation</div>
+      <div class="step-text">Call, WhatsApp, or fill out the contact form. Dami listens to your goals, budget, and timeline — no pressure, just honest conversation.</div>
+    </div>
+    <div class="step reveal">
+      <div class="step-circle">02</div>
+      <div class="step-title">Search & Strategy</div>
+      <div class="step-text">Dami curates properties that fit your criteria and walks you through each option — in person, by video tour, or virtually from anywhere in the world.</div>
+    </div>
+    <div class="step reveal">
+      <div class="step-circle">03</div>
+      <div class="step-title">Offer & Negotiate</div>
+      <div class="step-text">Once you've found the one, Dami handles the offer strategy and negotiates aggressively on your behalf to get you the best possible deal.</div>
+    </div>
+    <div class="step reveal">
+      <div class="step-circle">04</div>
+      <div class="step-title">Close & Celebrate</div>
+      <div class="step-text">Inspections, appraisals, title, and closing — Dami manages every moving part so you can focus on what matters. Then you get the keys.</div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA BAND -->
+<section class="cta-band">
+  <div class="reveal">
+    <h2 class="cta-title">Ready to Get <span>Started?</span></h2>
+  </div>
+  <div class="cta-right reveal">
+    <p class="cta-text">Whatever your real estate goal — buying, selling, investing, or relocating — Dami Olatunde brings Houston's sharpest expertise, widest network, and most genuine commitment to your success.</p>
+    <div class="cta-btns">
+      <a href="contact.html" class="btn-gold">Book a Free Consultation →</a>
+      <a href="listings.html" class="btn-black">Browse Properties</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-top">
+    <div class="footer-brand">
+      <div class="footer-brand-logo">
+        <div class="footer-brand-mark">DTR</div>
+        <span class="footer-brand-name">Dami The Realtor</span>
+      </div>
+      <p class="footer-brand-sub">Houston's Top 1% Real Estate Agent — helping buyers, sellers &amp; investors across Greater Houston, TX.</p>
+    </div>
+    <div class="footer-links">
+      <h4>Services</h4>
+      <ul>
+        <li><a href="#buying">Home Buying</a></li>
+        <li><a href="#selling">Home Selling</a></li>
+        <li><a href="#investment">Investment</a></li>
+        <li><a href="#foreign">Foreign Nationals</a></li>
+        <li><a href="#relocation">Relocation</a></li>
+        <li><a href="#luxury">Luxury Properties</a></li>
+        <li><a href="#tenant">Tenant Placement</a></li>
+      </ul>
+    </div>
+    <div class="footer-links">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="about.html">About Dami</a></li>
+        <li><a href="listings.html">Listings</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="https://www.har.com" target="_blank">HAR.com — MLS Search</a></li>
+      </ul>
+    </div>
+    <div class="footer-socials-block">
+      <h4>Follow Dami</h4>
+      <div class="footer-socials">
+        <a href="https://instagram.com/damitherealtor" target="_blank" class="social-btn" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
+        <a href="https://tiktok.com/@damitherealtor" target="_blank" class="social-btn" aria-label="TikTok"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 12a4 4 0 104 4V4a5 5 0 005 5"/></svg></a>
+        <a href="https://www.har.com" target="_blank" class="social-btn" aria-label="HAR.com"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg></a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="footer-copy">© 2025 <span>Dami The Realtor</span> · Dami Olatunde · All rights reserved</div>
+    <div class="footer-har">Proud partner of <a href="https://www.har.com" target="_blank">HAR.com</a> · Houston, TX</div>
+  </div>
+</footer>
+
+<script>
+// Nav scroll
+const navbar = document.getElementById('navbar');
+window.addEventListener('scroll', () => navbar.classList.toggle('scrolled', window.scrollY > 50));
+
+// Mobile menu
+const ham = document.getElementById('hamburger');
+const menu = document.getElementById('mobileMenu');
+let menuOpen = false;
+function toggleMenu(open) {
+  menuOpen = open;
+  menu.classList.toggle('open', open);
+  ham.classList.toggle('active', open);
+  document.body.style.overflow = open ? 'hidden' : '';
+}
+ham.addEventListener('click', e => { e.stopPropagation(); toggleMenu(!menuOpen); });
+document.querySelectorAll('.mobile-link').forEach(l => l.addEventListener('click', () => toggleMenu(false)));
+document.addEventListener('click', e => { if(menuOpen && !menu.contains(e.target) && !ham.contains(e.target)) toggleMenu(false); });
+
+// Reveal on scroll
+const reveals = document.querySelectorAll('.reveal');
+const obs = new IntersectionObserver(entries => {
+  entries.forEach((entry, i) => {
+    if(entry.isIntersecting) {
+      setTimeout(() => entry.target.classList.add('visible'), i * 70);
+      obs.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.08 });
+reveals.forEach(el => obs.observe(el));
+
+// Active service nav on scroll
+const sections = document.querySelectorAll('section[id], .foreign-callout[id]');
+const navLinks = document.querySelectorAll('.snav-link');
+window.addEventListener('scroll', () => {
+  let current = '';
+  sections.forEach(sec => {
+    if(window.scrollY >= sec.offsetTop - 140) current = sec.getAttribute('id');
+  });
+  navLinks.forEach(l => {
+    l.classList.toggle('active', l.getAttribute('href') === '#' + current);
+  });
+});
+</script>
+</body>
+</html>

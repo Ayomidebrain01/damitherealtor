@@ -149,21 +149,35 @@ nav.scrolled{height:62px;box-shadow:0 4px 30px rgba(0,0,0,.35);}
 
 /* FAQs */
 .faqs{padding:100px 8%;background:var(--black);}
-.faq-header{text-align:center;margin-bottom:60px;}
+.faq-header{text-align:center;margin-bottom:50px;}
 .faq-header .sec-title{color:var(--white);}
 .faq-header .sec-bar{background:var(--gold);}
 .faq-header .sec-tag{color:var(--gold);}
-.faq-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;max-width:960px;margin:0 auto;}
+/* Tab switcher */
+.faq-tabs{display:flex;justify-content:center;gap:0;margin-bottom:50px;border:1px solid rgba(255,255,255,.1);border-radius:8px;overflow:hidden;width:fit-content;margin-left:auto;margin-right:auto;}
+.faq-tab-btn{display:flex;align-items:center;gap:10px;padding:16px 32px;font-size:12px;letter-spacing:.14em;text-transform:uppercase;font-weight:700;font-family:'Poppins',sans-serif;background:none;border:none;color:rgba(255,255,255,.4);cursor:pointer;transition:all .25s;border-right:1px solid rgba(255,255,255,.1);}
+.faq-tab-btn:last-child{border-right:none;}
+.faq-tab-btn svg{width:15px;height:15px;flex-shrink:0;}
+.faq-tab-btn.active{background:var(--gold);color:var(--black);}
+.faq-tab-btn:not(.active):hover{background:rgba(255,255,255,.04);color:rgba(255,255,255,.7);}
+/* Panels */
+.faq-panel{display:none;}
+.faq-panel.active{display:block;}
+.faq-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;max-width:1040px;margin:0 auto;}
 .faq-item{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:6px;overflow:hidden;}
-.faq-q{display:flex;align-items:center;justify-content:space-between;padding:20px 22px;cursor:pointer;transition:background .2s;}
+.faq-q{display:flex;align-items:flex-start;justify-content:space-between;gap:14px;padding:20px 22px;cursor:pointer;transition:background .2s;}
 .faq-q:hover{background:rgba(255,255,255,.03);}
-.faq-q-text{font-size:13px;font-weight:600;color:var(--white);line-height:1.4;}
-.faq-toggle{width:24px;height:24px;flex-shrink:0;background:rgba(201,168,76,.1);border-radius:50%;display:flex;align-items:center;justify-content:center;transition:background .2s,transform .3s;}
+.faq-num{font-size:10px;font-weight:700;color:var(--gold);letter-spacing:.1em;flex-shrink:0;margin-top:2px;min-width:20px;}
+.faq-q-text{font-size:13px;font-weight:600;color:var(--white);line-height:1.45;flex:1;}
+.faq-toggle{width:24px;height:24px;flex-shrink:0;background:rgba(201,168,76,.1);border-radius:50%;display:flex;align-items:center;justify-content:center;transition:background .2s,transform .3s;margin-top:2px;}
 .faq-toggle svg{width:12px;height:12px;color:var(--gold);}
 .faq-item.open .faq-toggle{background:var(--gold);transform:rotate(45deg);}
 .faq-item.open .faq-toggle svg{color:var(--black);}
-.faq-a{font-size:13px;color:rgba(255,255,255,.5);line-height:1.8;padding:0 22px;max-height:0;overflow:hidden;transition:max-height .35s ease,padding .35s ease;}
-.faq-item.open .faq-a{max-height:200px;padding:0 22px 20px;}
+.faq-a{font-size:13px;color:rgba(255,255,255,.55);line-height:1.85;padding:0 22px 0 42px;max-height:0;overflow:hidden;transition:max-height .4s ease,padding .4s ease;}
+.faq-item.open .faq-a{max-height:300px;padding:0 22px 20px 42px;}
+/* CTA strip inside FAQ */
+.faq-cta-strip{display:flex;align-items:center;justify-content:center;gap:20px;margin-top:44px;padding:28px 32px;background:rgba(201,168,76,.07);border:1px solid rgba(201,168,76,.18);border-radius:8px;flex-wrap:wrap;max-width:1040px;margin-left:auto;margin-right:auto;}
+.faq-cta-strip p{font-size:14px;color:rgba(255,255,255,.6);}
 
 /* SOCIAL CONNECT */
 .social-connect{padding:80px 8%;background:var(--gold-pale);border-top:1px solid var(--border);}
@@ -210,6 +224,10 @@ footer{background:#080808;padding:50px 8%;border-top:2px solid var(--gold-dark);
   .contact-hero-inner{grid-template-columns:1fr;}
   .contact-main{grid-template-columns:1fr;}
   .faq-grid{grid-template-columns:1fr;}
+  .faq-tabs{flex-direction:column;width:100%;}
+  .faq-tab-btn{border-right:none;border-bottom:1px solid rgba(255,255,255,.1);}
+  .faq-tab-btn:last-child{border-bottom:none;}
+  .faq-cta-strip{flex-direction:column;text-align:center;}
 }
 @media(max-width:768px){
   .hamburger{display:flex;}
@@ -239,7 +257,7 @@ footer{background:#080808;padding:50px 8%;border-top:2px solid var(--gold-dark);
     <img src="logo.png" alt="Dami The Realtor" class="nav-logo-img"/>
   </a>
   <ul class="nav-links">
-    <li><a href="index.html#services">Services</a></li>
+    <li><a href="services.html">Services</a></li>
     <li><a href="about.html">About</a></li>
     <li><a href="listings.html">Listings</a></li>
     <li><a href="index.html#instagram">Connect</a></li>
@@ -394,7 +412,7 @@ footer{background:#080808;padding:50px 8%;border-top:2px solid var(--gold-dark);
             <option>$2,000,000+</option>
           </select>
         </div>
-        <div class="f-group"><label class="f-label">Your Message</label><textarea class="f-textarea" placeholder="Tell Dami about your real estate needs — the more detail, the better she can help you…"></textarea></div>
+        <div class="f-group"><label class="f-label">Your Message</label><textarea class="f-textarea" placeholder="Tell Dami about your real estate needs — the more detail, the better he can help you…"></textarea></div>
         <button class="btn-submit" id="submitBtn">Send Message →</button>
         <div class="form-disclaimer">By submitting, you agree to be contacted by Dami Olatunde. Your information is kept strictly confidential and never shared.</div>
       </div>
@@ -415,50 +433,298 @@ footer{background:#080808;padding:50px 8%;border-top:2px solid var(--gold-dark);
     <div class="sec-eyebrow" style="justify-content:center;"><div class="sec-bar" style="background:var(--gold)"></div><span class="sec-tag" style="color:var(--gold)">Got Questions?</span></div>
     <h2 class="sec-title" style="color:var(--white);">Frequently Asked <span>Questions</span></h2>
   </div>
-  <div class="faq-grid">
-    <div class="faq-item reveal">
-      <div class="faq-q" onclick="toggleFaq(this)">
-        <span class="faq-q-text">How do I start buying a home with Dami?</span>
-        <div class="faq-toggle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div>
+
+  <!-- TAB SWITCHER -->
+  <div class="faq-tabs reveal">
+    <button class="faq-tab-btn active" onclick="switchFaqTab('foreign', this)">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg>
+      Foreign National Buyers
+    </button>
+    <button class="faq-tab-btn" onclick="switchFaqTab('investors', this)">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg>
+      Investors
+    </button>
+  </div>
+
+  <!-- FOREIGN BUYERS PANEL -->
+  <div class="faq-panel active" id="faq-foreign">
+    <div class="faq-grid">
+
+      <div class="faq-item reveal">
+        <div class="faq-q" onclick="toggleFaq(this)">
+          <span class="faq-num">01</span>
+          <span class="faq-q-text">Can I buy a home in Houston from a different country?</span>
+          <div class="faq-toggle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div>
+        </div>
+        <div class="faq-a">Yes, you can. You'd be considered a foreign national, so you're required to pay about 35% for down payment and closing costs. The down payment is not negotiable.</div>
       </div>
-      <div class="faq-a">Simply send us a message using the form above or call/WhatsApp Dami directly. She'll schedule a free consultation call to understand your needs, budget, and timeline — then get to work.</div>
-    </div>
-    <div class="faq-item reveal">
-      <div class="faq-q" onclick="toggleFaq(this)">
-        <span class="faq-q-text">Does Dami work with out-of-state or international buyers?</span>
-        <div class="faq-toggle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div>
+
+      <div class="faq-item reveal">
+        <div class="faq-q" onclick="toggleFaq(this)">
+          <span class="faq-num">02</span>
+          <span class="faq-q-text">I live in Canada — would I still be considered a foreign national?</span>
+          <div class="faq-toggle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div>
+        </div>
+        <div class="faq-a">Yes, you would. Any country outside the U.S., no matter how close, is considered foreign.</div>
       </div>
-      <div class="faq-a">Absolutely. Dami is a relocation specialist and works with clients from across the US and internationally. Virtual tours, remote signings, and full concierge support are all available.</div>
-    </div>
-    <div class="faq-item reveal">
-      <div class="faq-q" onclick="toggleFaq(this)">
-        <span class="faq-q-text">What areas does Dami cover in Greater Houston?</span>
-        <div class="faq-toggle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div>
+
+      <div class="faq-item reveal">
+        <div class="faq-q" onclick="toggleFaq(this)">
+          <span class="faq-num">03</span>
+          <span class="faq-q-text">When do I need to have the complete amount?</span>
+          <div class="faq-toggle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div>
+        </div>
+        <div class="faq-a">You need to have — and be able to show and prove — that you have the entire down payment before starting the process.</div>
       </div>
-      <div class="faq-a">Dami covers all of Greater Houston including River Oaks, Galleria, Memorial, The Heights, Katy, Sugar Land, The Woodlands, Pearland, Friendswood, and 20+ other neighbourhoods.</div>
-    </div>
-    <div class="faq-item reveal">
-      <div class="faq-q" onclick="toggleFaq(this)">
-        <span class="faq-q-text">What's your commission structure?</span>
-        <div class="faq-toggle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div>
+
+      <div class="faq-item reveal">
+        <div class="faq-q" onclick="toggleFaq(this)">
+          <span class="faq-num">04</span>
+          <span class="faq-q-text">What do I need to qualify as a foreign national?</span>
+          <div class="faq-toggle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div>
+        </div>
+        <div class="faq-a">You'll need: an international passport, a foreign address, and bank statements showing you have the funds required for the transaction.</div>
       </div>
-      <div class="faq-a">Commission is discussed transparently during your initial consultation. As a buyer, Dami's services are typically free to you — her commission is paid by the seller. Contact us for seller-side details.</div>
-    </div>
-    <div class="faq-item reveal">
-      <div class="faq-q" onclick="toggleFaq(this)">
-        <span class="faq-q-text">How quickly can Dami list my property?</span>
-        <div class="faq-toggle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div>
+
+      <div class="faq-item reveal">
+        <div class="faq-q" onclick="toggleFaq(this)">
+          <span class="faq-num">05</span>
+          <span class="faq-q-text">What's the breakdown of the 35%?</span>
+          <div class="faq-toggle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div>
+        </div>
+        <div class="faq-a">The 35% is a percentage of the property price. For example, on a $350K property, 35% = $122,500. On a $300K property, it's $105,000. This 35% covers your down payment + closing costs + inspection + appraisal — everything you're required to pay.</div>
       </div>
-      <div class="faq-a">Once you're ready, Dami can have your listing live on HAR.com and across social media within 48–72 hours — complete with professional photography and a full marketing campaign.</div>
-    </div>
-    <div class="faq-item reveal">
-      <div class="faq-q" onclick="toggleFaq(this)">
-        <span class="faq-q-text">Does Dami assist with investment properties?</span>
-        <div class="faq-toggle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div>
+
+      <div class="faq-item reveal">
+        <div class="faq-q" onclick="toggleFaq(this)">
+          <span class="faq-num">06</span>
+          <span class="faq-q-text">Where would the remaining 65% come from?</span>
+          <div class="faq-toggle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div>
+        </div>
+        <div class="faq-a">You'd be getting a loan for the balance. Dami's loan officer partners will walk you through the process and handle the financing side.</div>
       </div>
-      <div class="faq-a">Yes — investment real estate is one of Dami's specialties. From single-family rentals to multi-units and fix-and-flip opportunities, she can help you identify, analyse, and acquire high-yield properties.</div>
+
+      <div class="faq-item reveal">
+        <div class="faq-q" onclick="toggleFaq(this)">
+          <span class="faq-num">07</span>
+          <span class="faq-q-text">Are there any other fees or people I need to pay?</span>
+          <div class="faq-toggle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div>
+        </div>
+        <div class="faq-a">No — the 35% is inclusive of everything you'd be required to pay. Keep in mind the 35% is an average, so your actual amount may be slightly more or less, but you'll know the exact number before signing any contract.</div>
+      </div>
+
+      <div class="faq-item reveal">
+        <div class="faq-q" onclick="toggleFaq(this)">
+          <span class="faq-num">08</span>
+          <span class="faq-q-text">How does Dami get paid? Do I have to pay her?</span>
+          <div class="faq-toggle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div>
+        </div>
+        <div class="faq-a">9 out of 10 times, the seller pays Dami's fee. Occasionally, if a seller won't cover it, you'd pay only if you're 100% set on that specific property — OR Dami can find you another property where the seller pays. His fee is 3% of the sales price, which would be added to the 35% amount if applicable.</div>
+      </div>
+
+      <div class="faq-item reveal">
+        <div class="faq-q" onclick="toggleFaq(this)">
+          <span class="faq-num">09</span>
+          <span class="faq-q-text">Can I just buy the property with full cash?</span>
+          <div class="faq-toggle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div>
+        </div>
+        <div class="faq-a">Yes, absolutely. Just provide proof of funds (bank statements, etc.) and we can start the process immediately. No loan would be required.</div>
+      </div>
+
+      <div class="faq-item reveal">
+        <div class="faq-q" onclick="toggleFaq(this)">
+          <span class="faq-num">10</span>
+          <span class="faq-q-text">Can I get US residency or citizenship when I buy a property?</span>
+          <div class="faq-toggle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div>
+        </div>
+        <div class="faq-a">No — buying a property does not grant citizenship or residency. There could be extenuating circumstances in which it's possible, but you'd need to consult with an immigration attorney about that.</div>
+      </div>
+
+      <div class="faq-item reveal">
+        <div class="faq-q" onclick="toggleFaq(this)">
+          <span class="faq-num">11</span>
+          <span class="faq-q-text">Do I need to be in the US to start or close on the property?</span>
+          <div class="faq-toggle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div>
+        </div>
+        <div class="faq-a">No, you don't. You can close from wherever you are, as long as your country has a US Embassy. You'll just need to schedule a notary appointment at the Embassy about 2 weeks prior to closing.</div>
+      </div>
+
+      <div class="faq-item reveal">
+        <div class="faq-q" onclick="toggleFaq(this)">
+          <span class="faq-num">12</span>
+          <span class="faq-q-text">How will I see homes if I'm not in the US?</span>
+          <div class="faq-toggle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div>
+        </div>
+        <div class="faq-a">Dami will send you a curated list of options based on your requirements. You'll select the ones you want to see, and he'll personally visit each property and record full video tours — complete with his honest feedback and thoughts on each one.</div>
+      </div>
+
+      <div class="faq-item reveal">
+        <div class="faq-q" onclick="toggleFaq(this)">
+          <span class="faq-num">13</span>
+          <span class="faq-q-text">Will you help find a tenant?</span>
+          <div class="faq-toggle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div>
+        </div>
+        <div class="faq-a">Yes. Dami can help list the property and thoroughly vet applicants by running credit and background checks to make sure they're qualified tenants.</div>
+      </div>
+
+      <div class="faq-item reveal">
+        <div class="faq-q" onclick="toggleFaq(this)">
+          <span class="faq-num">14</span>
+          <span class="faq-q-text">Will you help manage the property?</span>
+          <div class="faq-toggle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div>
+        </div>
+        <div class="faq-a">Dami doesn't do property management directly, but he can connect you with a trusted property management company that will handle everything on your behalf.</div>
+      </div>
+
+      <div class="faq-item reveal">
+        <div class="faq-q" onclick="toggleFaq(this)">
+          <span class="faq-num">15</span>
+          <span class="faq-q-text">What's the first step if I'm ready to proceed?</span>
+          <div class="faq-toggle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div>
+        </div>
+        <div class="faq-a">The first step is getting a pre-approval, which shows your purchasing power. Let Dami know you're ready and he'll send you the loan application link. Once pre-approval is in hand, you can start touring homes right away.</div>
+      </div>
+
+      <div class="faq-item reveal">
+        <div class="faq-q" onclick="toggleFaq(this)">
+          <span class="faq-num">16</span>
+          <span class="faq-q-text">How can I contact Dami?</span>
+          <div class="faq-toggle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div>
+        </div>
+        <div class="faq-a">You can call or text Dami at <strong style="color:var(--gold);">+1-832-955-8008</strong> — this number is also available on WhatsApp. If he doesn't answer, send a text message and he'll call back at the earliest opportunity.</div>
+      </div>
+
     </div>
   </div>
+
+  <!-- INVESTORS PANEL -->
+  <div class="faq-panel" id="faq-investors">
+    <div class="faq-grid">
+
+      <div class="faq-item reveal">
+        <div class="faq-q" onclick="toggleFaq(this)">
+          <span class="faq-num">01</span>
+          <span class="faq-q-text">What's the down payment required for an investment property?</span>
+          <div class="faq-toggle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div>
+        </div>
+        <div class="faq-a">The average down payment is anywhere from 15–25%, depending on the property type, loan type, and your credit worthiness.</div>
+      </div>
+
+      <div class="faq-item reveal">
+        <div class="faq-q" onclick="toggleFaq(this)">
+          <span class="faq-num">02</span>
+          <span class="faq-q-text">What types of investment options are available?</span>
+          <div class="faq-toggle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div>
+        </div>
+        <div class="faq-a">You can choose from single-family homes, multi-unit properties (duplex, triplex, quadplex, 1–10 units), condos, townhomes, commercial properties, and more.</div>
+      </div>
+
+      <div class="faq-item reveal">
+        <div class="faq-q" onclick="toggleFaq(this)">
+          <span class="faq-num">03</span>
+          <span class="faq-q-text">Can I buy multiple units without them being together like a duplex?</span>
+          <div class="faq-toggle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div>
+        </div>
+        <div class="faq-a">Yes. You can buy anywhere from 3 to 20 separate properties across Houston under a single transaction — meaning just 1 loan and 1 payment covering all units.</div>
+      </div>
+
+      <div class="faq-item reveal">
+        <div class="faq-q" onclick="toggleFaq(this)">
+          <span class="faq-num">04</span>
+          <span class="faq-q-text">What financing programs are available?</span>
+          <div class="faq-toggle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div>
+        </div>
+        <div class="faq-a">Options include Conventional Loans, Bank Statement Loans, DSCR Loans, and many other loan products tailored to fit your investment needs and financial profile.</div>
+      </div>
+
+      <div class="faq-item reveal">
+        <div class="faq-q" onclick="toggleFaq(this)">
+          <span class="faq-num">05</span>
+          <span class="faq-q-text">Can I buy an investment property in Houston if I live in a different state?</span>
+          <div class="faq-toggle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div>
+        </div>
+        <div class="faq-a">Yes, absolutely. You can invest from another state, or even from outside the US — a visa is not required either.</div>
+      </div>
+
+      <div class="faq-item reveal">
+        <div class="faq-q" onclick="toggleFaq(this)">
+          <span class="faq-num">06</span>
+          <span class="faq-q-text">Am I guaranteed to cash flow when I buy an investment property?</span>
+          <div class="faq-toggle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div>
+        </div>
+        <div class="faq-a">Nothing is guaranteed in any investment. However, Dami will give you as much data as possible to make a well-informed decision, and help target areas with a high probability of cash flow. The goal is always to set you up for success.</div>
+      </div>
+
+      <div class="faq-item reveal">
+        <div class="faq-q" onclick="toggleFaq(this)">
+          <span class="faq-num">07</span>
+          <span class="faq-q-text">What credit score is required?</span>
+          <div class="faq-toggle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div>
+        </div>
+        <div class="faq-a">Lenders typically look for a 620, though a 600 may work in some cases depending on the loan type and other qualifying factors.</div>
+      </div>
+
+      <div class="faq-item reveal">
+        <div class="faq-q" onclick="toggleFaq(this)">
+          <span class="faq-num">08</span>
+          <span class="faq-q-text">Do you help manage properties?</span>
+          <div class="faq-toggle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div>
+        </div>
+        <div class="faq-a">Dami doesn't personally manage properties, but he has trusted property manager partners he can connect you with — so your investment runs completely hands-free, whether it's a short-term rental (Airbnb) or a long-term rental.</div>
+      </div>
+
+      <div class="faq-item reveal">
+        <div class="faq-q" onclick="toggleFaq(this)">
+          <span class="faq-num">09</span>
+          <span class="faq-q-text">If I buy for long-term rentals, can you help me find a tenant?</span>
+          <div class="faq-toggle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div>
+        </div>
+        <div class="faq-a">Yes. Dami can list and market the property on the MLS and thoroughly vet applicants via background and credit checks to help you secure a well-qualified tenant.</div>
+      </div>
+
+      <div class="faq-item reveal">
+        <div class="faq-q" onclick="toggleFaq(this)">
+          <span class="faq-num">10</span>
+          <span class="faq-q-text">Are there any potential risks to buying an investment property?</span>
+          <div class="faq-toggle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div>
+        </div>
+        <div class="faq-a">As with any business, risks exist — vacancies, unexpected repairs, market shifts. Proper planning helps mitigate them, and when done right, the benefits far outweigh the risks.</div>
+      </div>
+
+      <div class="faq-item reveal">
+        <div class="faq-q" onclick="toggleFaq(this)">
+          <span class="faq-num">11</span>
+          <span class="faq-q-text">Can I buy a property through an LLC?</span>
+          <div class="faq-toggle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div>
+        </div>
+        <div class="faq-a">Yes, it's possible. Dami's loan officer partners will walk you through this process in detail and help you determine the best structure for your situation.</div>
+      </div>
+
+      <div class="faq-item reveal">
+        <div class="faq-q" onclick="toggleFaq(this)">
+          <span class="faq-num">12</span>
+          <span class="faq-q-text">How do I get started?</span>
+          <div class="faq-toggle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div>
+        </div>
+        <div class="faq-a">Simple — call or text Dami to kick off the process: <strong style="color:var(--gold);">832-955-8008</strong>. This number is also available on WhatsApp.</div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- BOTTOM CTA -->
+  <div class="faq-cta-strip reveal">
+    <p>Still have questions? Dami answers personally.</p>
+    <a href="https://wa.me/18329558008" target="_blank" style="display:inline-flex;align-items:center;gap:8px;background:#25d366;color:#fff;padding:12px 24px;border-radius:4px;font-size:12px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;text-decoration:none;transition:background .2s;" onmouseover="this.style.background='#1fb855'" onmouseout="this.style.background='#25d366'">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
+      Ask on WhatsApp
+    </a>
+    <a href="tel:+18329558008" style="display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.08);color:rgba(255,255,255,.75);padding:12px 24px;border-radius:4px;font-size:12px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;text-decoration:none;border:1px solid rgba(255,255,255,.12);transition:all .2s;" onmouseover="this.style.borderColor='var(--gold)';this.style.color='var(--gold)'" onmouseout="this.style.borderColor='rgba(255,255,255,.12)';this.style.color='rgba(255,255,255,.75)'">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013 9.09a19.78 19.78 0 01-3.07-8.67A2 2 0 011.87 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 9.91"/></svg>
+      +1-832-955-8008
+    </a>
+  </div>
+
 </section>
 
 <!-- SOCIAL CONNECT -->
@@ -494,7 +760,7 @@ footer{background:#080808;padding:50px 8%;border-top:2px solid var(--gold-dark);
     <div class="footer-links">
       <h4>Quick Links</h4>
       <ul>
-        <li><a href="index.html#services">Services</a></li>
+        <li><a href="services.html">Services</a></li>
         <li><a href="about.html">About Dami</a></li>
         <li><a href="listings.html">Listings</a></li>
         <li><a href="contact.html">Contact</a></li>
@@ -558,7 +824,23 @@ function toggleChip(chip) {
   chip.classList.toggle('selected');
 }
 
-// FAQ
+// FAQ tab switcher
+function switchFaqTab(tab, btn) {
+  document.querySelectorAll('.faq-tab-btn').forEach(b => b.classList.remove('active'));
+  document.querySelectorAll('.faq-panel').forEach(p => p.classList.remove('active'));
+  btn.classList.add('active');
+  document.getElementById('faq-' + tab).classList.add('active');
+  document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+}
+
+// FAQ accordion
 function toggleFaq(qEl) {
   const item = qEl.closest('.faq-item');
-  const isOpen = item.classList.con
+  const panel = item.closest('.faq-panel');
+  const isOpen = item.classList.contains('open');
+  panel.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+  if(!isOpen) item.classList.add('open');
+}
+</script>
+</body>
+</html>
